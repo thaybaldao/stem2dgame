@@ -8,16 +8,27 @@ class TelaDeInicio(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela de Inicio'
 
-
+    # metodo para lidar com interacoes com o botao que direciona para a tela de instrucoes
     def comportamentoBotaoDeInstrucoes(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de instrucoes
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Instrucoes'
+        """TODO"""
         pass
 
 
+    # metodo para lidar com interacoes com o botao de jogar
     def comportamentoBotaoDeJogar(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
+    # metodo para lidar com interacoes com o botao que direciona para a tela de escolha de personagens
     def comportamentoBotaoDeEscolherPersonagem(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de escolha de personagens
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Escolha de Personagens'
+        """TODO"""
         pass
 
 

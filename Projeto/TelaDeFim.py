@@ -9,8 +9,15 @@ class TelaDeFim(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela de Fim'
 
+
+    # metodo para lidar com interacoes com o botao de replay
     def comportamentoBotaoDeReplay(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        # lidar com a variavel (game.nivel) que armazena qual eh o nivel do jogo naquele momento
+        """TODO"""
         pass
+
 
     def interpretarEventos(self, game):
         game.clock.tick(game.fps)
@@ -30,11 +37,13 @@ class TelaDeFim(Tela):
 
     # desenhar o score do jogo na tela
     def imprimirScore(self, game):
+        """TODO"""
         pass
 
 
     # desenhar o maior score na tela
     def imprimirMaiorScore(self, game):
+        """TODO"""
         pass
 
 
@@ -42,7 +51,8 @@ class TelaDeFim(Tela):
     def desenharTela(self, game):
         self.imprimirScore(game)
         self.imprimirMaiorScore(game)
-        # desenhar os outros componenentes da tela
+        """TODO"""
+        pass
 
 
     def desenhar(self, game):

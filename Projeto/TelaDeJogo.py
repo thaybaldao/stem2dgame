@@ -30,32 +30,37 @@ class TelaDeJogo(Tela):
         self.moedas = []
         self.comandoDoUsuario = 0
 
-        # inicializando a pontuacao
+        # inicializando a pontuacao do jogo
         self.score = 0
 
 
     def computarScore(self):
+        # chamar estemetodo nas colisoes do jogador com as moedas
+        """TODO"""
         pass
 
 
     def imprimirScore(self, game):
+        """TODO"""
         pass
 
-
+    # imprime tempo de invencibilidade na Tela a partir do momento em que a varivel jogador.ehInvencivel se tornar verdadeira, por x segundos
     def imprimirTempoDeInvencibilidade(self):
-        # imprimir tempo de invencibilidade a partir do momento em que a varivel jogador.ehInvencivel se tornar verdadeira, por 15 segundos
+        """TODO"""
         pass
 
 
-    # criar obstaculos na tela e apagar os que ja nao estao mais na tela
+    # cria itens do cenario na tela
     def criarCenario(self, game):
+        """TODO"""
         pass
 
     def checarComportamentoJogador(self, game, evento):
+        # verificar se o usuario pediu para o jogador fazer algum comando (andar para esquerda, andar para a direita, ou ainda, pular)
+        """TODO"""
         pass
 
 
-    # verifica as colisoes do jogo
     def checarColisoes(self):
         for obstaculo in self.obstaculos:
             obstaculo.checarColisoes(self)
@@ -123,8 +128,6 @@ class TelaDeJogo(Tela):
     def desenhar(self, game):
         self.desenharTelaBasica(game)
 
-        self.criarCenario(game)
-
         for obstaculo in self.obstaculos:
             obstaculo.desenhar(self)
 
@@ -153,11 +156,15 @@ class TelaDeJogo(Tela):
         if self.jogador.ehInvencivel:
             self.imprimirTempoDeInvencibilidade()
 
+        # desenhar a barra de vidas
+        """TODO"""
+
         pygame.display.flip()
 
 
     def run(self, game):
         while game.telaAtual == self.name and not game.usuarioSaiu:
+            self.criarCenario(game)
             self.interpretarEventos(game)
             self.atualizar(game)
             self.computarScore()

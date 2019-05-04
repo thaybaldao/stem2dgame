@@ -10,11 +10,19 @@ class TelaDeInstrucoes(Tela):
         self.name = "Tela de Instrucoes"
 
 
+    # metodo para lidar com interacoes com o botao de jogar
     def comportamentoBotaoPlay(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
+    # metodo para lidar com interacoes com o botao que redireciona para a tela de inicio
     def comportamentoBotaoVoltarTelaInicio(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de inicio
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Inicio'
+        """TODO"""
         pass
 
 
@@ -36,9 +44,12 @@ class TelaDeInstrucoes(Tela):
             # checa se o usuario quer voltar para a tela de inicio
             self.comportamentoBotaoVoltarTelaInicio(game, evento, pos)
 
+
     # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
     def desenharTela(self, game):
+        """TODO"""
         pass
+
 
     def desenhar(self, game):
         self.desenharTelaBasica(game)

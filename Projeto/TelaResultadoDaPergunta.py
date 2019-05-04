@@ -9,6 +9,7 @@ class TelaResultadoDaPergunta(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela Resultado da Pergunta'
 
+
     def interpretarEventos(self, game):
         game.clock.tick(game.fps)
 
@@ -21,14 +22,18 @@ class TelaResultadoDaPergunta(Tela):
             # checa se o usuario quer tirar o som
             self.comportamentoBotaoDeAudio(game, evento, pos)
 
+
     # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
     def desenharTela(self, game):
+        """TODO"""
         pass
+
 
     def desenhar(self, game):
         self.desenharTelaBasica(game)
         self.desenharTela(game)
         pygame.display.flip()
+
 
     def run(self, game):
         while game.telaAtual == self.name and not game.usuarioSaiu:

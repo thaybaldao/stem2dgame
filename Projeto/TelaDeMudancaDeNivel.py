@@ -9,7 +9,12 @@ class TelaDeMudancaDeNivel(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela de Mudanca de Nivel'
 
+    # metodo para lidar com o botao que vai para o proximo nivel
     def comportamentoBotaoProximoNivel(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        # lidar com a variavel (game.nivel) que armazena qual eh o nivel do jogo naquele momento
+        """TODO"""
         pass
 
 
@@ -31,6 +36,7 @@ class TelaDeMudancaDeNivel(Tela):
 
     # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
     def desenharTela(self, game):
+        """TODO"""
         pass
 
 

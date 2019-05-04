@@ -9,27 +9,39 @@ class TelaDeEscolhaDePersonagem(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela de Escolha de Personagens'
 
+
+    # metodo para lidar com a escolha do pesonagem A
     def comportamentoBotaoEscolhaPesonagemA(self, game, evento, pos):
         # atualizar a string game.tipoJogador com 'A' caso o usuario selecione este personagem
         # trocar para a tela de jogo caso o usuario selecione o personagem
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
+    # metodo para lidar com a escolha do pesonagem B
     def comportamentoBotaoEscolhaPesonagemB(self, game, evento, pos):
         # atualizar a string game.tipoJogador com 'B' caso o usuario selecione este personagem
         # trocar para a tela de jogo caso o usuario selecione o personagem
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
+    # metodo para lidar com a escolha do pesonagem C
     def comportamentoBotaoEscolhaPesonagemC(self, game, evento, pos):
         # atualizar a string game.tipoJogador com 'C' caso o usuario selecione este personagem
         # trocar para a tela de jogo caso o usuario selecione o personagem
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
-
+    # metodo para lidar com a escolha do pesonagem D
     def comportamentoBotaoEscolhaPesonagemD(self, game, evento, pos):
         # atualizar a string game.tipoJogador com 'D' caso o usuario selecione este personagem
         # trocar para a tela de jogo caso o usuario selecione o personagem
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
@@ -60,6 +72,7 @@ class TelaDeEscolhaDePersonagem(Tela):
 
     # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
     def desenharTela(self, game):
+        """TODO"""
         pass
 
 

@@ -9,16 +9,35 @@ class TelaDePerguntas(Tela):
         super().__init__(game, nomeImagemDeFundo)
         self.name = 'Tela de Perguntas'
 
+    # metodo para lidar com a escolha da alternativa A
     def comportamentoBotaoAlternativaA(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
+
+    # metodo para lidar com a escolha da alternativa B
     def comportamentoBotaoAlternativaB(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
+
+    # metodo para lidar com a escolha da alternativa C
     def comportamentoBotaoAlternativaC(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
+
+    # metodo para lidar com a escolha da alternativa D
     def comportamentoBotaoAlternativaD(self, game, evento, pos):
+        # caso o usuario clique neste botao ele sera redirecionado para a tela de jogo
+        # para fazer isto basta fazer a variavel game.telaAtual = 'Tela de Jogo'
+        """TODO"""
         pass
 
 
@@ -46,14 +65,18 @@ class TelaDePerguntas(Tela):
             # checa se o usuario escolheu a alternativa D
             self.comportamentoBotaoAlternativaD(game, evento, pos)
 
+
     # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
     def desenharTela(self, game):
+        """TODO"""
         pass
+
 
     def desenhar(self, game):
         self.desenharTelaBasica(game)
         self.desenharTela(game)
         pygame.display.flip()
+
 
     def run(self, game):
         while game.telaAtual == self.name and not game.usuarioSaiu:
