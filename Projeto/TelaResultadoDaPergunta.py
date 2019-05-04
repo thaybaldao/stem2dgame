@@ -7,15 +7,30 @@ import os
 class TelaResultadoDaPergunta(Tela):
     def __init__(self, game, nomeImagemDeFundo):
         super().__init__(game, nomeImagemDeFundo)
+        self.name = 'Tela Resultado da Pergunta'
 
-    def imprimirResultadoPergunta(self, game):
-        pass
+    def interpretarEventos(self, game):
+        game.clock.tick(game.fps)
 
-    def run(self):
-        # fazer a tela rodar por um intervalo de tempo suficiente para se poder ler o resultado
+        for evento in pygame.event.get():
+            pos = pygame.mouse.get_pos()
+
+            # checa se o usuario quer sair do jogo
+            self.comportamentoBotaoDeSair(game, evento)
+
+            # checa se o usuario quer tirar o som
+            self.comportamentoBotaoDeAudio(game, evento, pos)
+
+    # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+    def desenharTela(self, game):
         pass
 
     def desenhar(self, game):
         self.desenharTelaBasica(game)
-        self.imprimirResultadoPergunta()
+        self.desenharTela(game)
         pygame.display.flip()
+
+    def run(self, game):
+        while game.telaAtual == self.name and not game.usuarioSaiu:
+            self.interpretarEventos(game)
+            self.desenhar(game)

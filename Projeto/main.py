@@ -26,7 +26,7 @@ class AdministradorDoJogo:
         # initializing constantes do jogo
         self.telaAtual = 'Tela de Jogo' # mudar para tela de inicio quando ela existir
         self.usuarioSaiu = False
-        self.comSom = True
+        self.comAudio= True
         self.tipoJogador = 'N'
         self.nivel = 1
 

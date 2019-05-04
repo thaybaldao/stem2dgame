@@ -11,8 +11,6 @@ class Jogador():
     def __init__(self, game):
         self.x = 150
         self.y = 200
-        self.largura = 49
-        self.altura = 47
         if game.tipoJogador == 'A' or game.tipoJogador == 'N':
             self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_A.png'))
             self.imagemInvencivel = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_A.png'))
@@ -36,6 +34,8 @@ class Jogador():
         #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_D.png'))
         #     self.imagemInvencivelCresceu = pygame.image.load(
         #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_D.png'))
+        self.largura = self.imagem.get_width()
+        self.altura = self.imagem.get_height()
         self.rect = self.imagem.get_rect()
         self.rect.center = (self.x, self.y)
         self.pos = vec(self.x, self.y)

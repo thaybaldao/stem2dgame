@@ -2,8 +2,8 @@ from Cenario import *
 import pygame
 
 class Moeda(Cenario):
-    def __init__(self, x, y, largura, altura, imagem, tipo, num, vel):
-        super().__init__(x, y, largura, altura, imagem, tipo, num, vel)
+    def __init__(self, x, y, imagem, tipo, num, vel):
+        super().__init__(x, y, imagem, tipo, num, vel)
 
     def atualizar(self, game):
         self.atualizacaoBasica()
