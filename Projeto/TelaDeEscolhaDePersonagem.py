@@ -5,8 +5,8 @@ import os
 
 
 class TelaDeEscolhaDePersonagem(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def imprimirDescricaoDosPersonagens(self, game, event):
         pass
@@ -34,7 +34,7 @@ class TelaDeEscolhaDePersonagem(Tela):
         pass
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
         self.desenharPersonagens()
         self.imprimirDescricaoDosPersonagens()
 

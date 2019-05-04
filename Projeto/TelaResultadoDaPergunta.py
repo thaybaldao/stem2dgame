@@ -5,8 +5,8 @@ import os
 
 
 class TelaResultadoDaPergunta(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def imprimirResultadoPergunta(self, game):
         pass
@@ -16,6 +16,6 @@ class TelaResultadoDaPergunta(Tela):
         pass
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
         self.imprimirResultadoPergunta()
         pygame.display.flip()

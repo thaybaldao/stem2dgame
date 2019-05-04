@@ -5,8 +5,8 @@ import os
 
 
 class TelaDeInstrucoes(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def comportamentoBotaoPlay(self, game, event):
         pass
@@ -18,7 +18,7 @@ class TelaDeInstrucoes(Tela):
         pass
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
         self.imprimirInstrucoes()
 
         # desenhar o que faltar

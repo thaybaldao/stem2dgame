@@ -5,8 +5,8 @@ import os
 
 
 class TelaDeFim(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def comportamentoBotaoDeReplay(self, game, event):
         pass

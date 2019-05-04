@@ -16,31 +16,31 @@ class Jogador():
         if game.tipoJogador == 'A' or game.tipoJogador == 'N':
             self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_A.png'))
             self.imagemInvencivel = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_A.png'))
-            self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_A.png'))
-            self.imagemInvencivelCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_A.png'))
-        elif game.tipoJogador == 'B':
-            self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_B.png'))
-            self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_B.png'))
-            self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_B.png'))
-            self.imagemInvencivelCresceu = pygame.image.load(
-                os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_B.png'))
-        elif game.tipoJogador == 'C':
-            self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_C.png'))
-            self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_C.png'))
-            self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_C.png'))
-            self.imagemInvencivelCresceu = pygame.image.load(
-                os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_C.png'))
-        else:
-            self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_D.png'))
-            self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_D.png'))
-            self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_D.png'))
-            self.imagemInvencivelCresceu = pygame.image.load(
-                os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_D.png'))
+            # self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_A.png'))
+            # self.imagemInvencivelCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_A.png'))
+        # elif game.tipoJogador == 'B':
+        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_B.png'))
+        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_B.png'))
+        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_B.png'))
+        #     self.imagemInvencivelCresceu = pygame.image.load(
+        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_B.png'))
+        # elif game.tipoJogador == 'C':
+        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_C.png'))
+        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_C.png'))
+        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_C.png'))
+        #     self.imagemInvencivelCresceu = pygame.image.load(
+        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_C.png'))
+        # else:
+        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_D.png'))
+        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_D.png'))
+        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_D.png'))
+        #     self.imagemInvencivelCresceu = pygame.image.load(
+        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_D.png'))
         self.rect = self.imagem.get_rect()
         self.rect.center = (self.x, self.y)
         self.pos = vec(self.x, self.y)
         self.vel = vec(0, 0)
-        self.acc = vec(0, PLAYER_GRAV)
+        self.acc = vec(0, ACE_GRAV)
         self.poder = 0
         self.ehInvencivel = False
         self.vidasExtra = 0
@@ -70,12 +70,12 @@ class Jogador():
         # administrar o tempo de invencibilidade do jogador
         pass
 
-    def desenhar(self, win):
+    def desenhar(self, game):
         if self.ehInvencivel == False and self.cresceu == False:
-            win.blit(self.imagem, (self.rect.left, self.rect.top))
+            game.janela.blit(self.imagem, (self.rect.left, self.rect.top))
         elif self.ehInvencivel == True and self.cresceu == True:
-            win.blit(self.imagemInvencivelCresceu, (self.rect.left, self.rect.top))
-        elif self.ehInvencivel == True:
-            win.blit(self.imagemInvencivel, (self.rect.left, self.rect.top))
+            game.janela.blit(self.imagemInvencivelCresceu, (self.rect.left, self.rect.top))
+        elif janela.ehInvencivel == True:
+            game.janela.blit(self.imagemInvencivel, (self.rect.left, self.rect.top))
         else:
-            win.blit(self.imagemCresceu, (self.rect.left, self.rect.top))
+            game.janela.blit(self.imagemCresceu, (self.rect.left, self.rect.top))

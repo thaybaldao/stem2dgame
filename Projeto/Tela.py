@@ -4,28 +4,34 @@ import pygame
 import os
 
 class Tela:
-    def __init__(self, nomeImagemDeFundo):
-        self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Sound.png'))
+    def __init__(self, game, nomeImagemDeFundo):
         self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', nomeImagemDeFundo + '.png'))
         self.administradorDeAudio = AdministradorDeAudio()
+        self.comAudio = True
 
 
-    def comportamentoBotaoDeAudio(self, game, event):
-        pass
+    def comportamentoBotaoDeAudio(self, game, event, pos):
+        if pos[0] > 740 and pos[0] < 785 and pos[1] > 450 and pos[1] < 495 or event.type == pygame.key.get_pressed()[pygame.K_m]:
+            if self.comAudio:
+                self.comAudio = False
+            else:
+                self.comAudio = True
 
     def comportamentoBotaoDeSair(self, game, event):
-        pass
+        if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and pygame.key.get_pressed()[pygame.K_ESCAPE]:
+            game.usuarioSaiu = True
+
 
 
     def desenharTelaBasica(self, game):
-        game.screen.blit(self.imagemDeFundo, (0, 0))
+        game.janela.blit(self.imagemDeFundo, (0, 0))
 
         # carrega a imagem do botao de audio de acordo com o status de audio do jogo
         if self.comAudio:
             self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Com_Som.png'))
         else:
             self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Sem_Som.png'))
-        game.screen.blit(self.botaoSom, (740, 450))
+        game.janela.blit(self.botaoSom, (740, 450))
 
 
 

@@ -5,8 +5,8 @@ import os
 
 
 class TelaDePerguntas(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def imprimirPergunta(self, game):
         pass
@@ -30,7 +30,7 @@ class TelaDePerguntas(Tela):
         pass
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
         self.imprimirPergunta()
         self.imprimirAlternativas()
 

@@ -1,10 +1,11 @@
 from Configuracoes import *
+from Tela import *
 import pygame
 import os
 
 class TelaDeInicio(Tela):
-    def __init__(self, nomeImagemDeFundo):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
     def comportamentoBotaoDeInstrucoes(self, game):
         pass
@@ -19,7 +20,7 @@ class TelaDeInicio(Tela):
         pass
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
 
         # desenhar o que faltar
 

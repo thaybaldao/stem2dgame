@@ -10,8 +10,8 @@ import os
 from pygame.locals import *
 
 class TelaDeJogo(Tela):
-    def __init__(self, nomeImagemDeFundo, game):
-        super().__init__(nomeImagemDeFundo)
+    def __init__(self, game, nomeImagemDeFundo):
+        super().__init__(game, nomeImagemDeFundo)
 
         # inicializando jogador e vetor para armazenar outros elementos do jogo
         self.jogador = Jogador(game)
@@ -23,6 +23,7 @@ class TelaDeJogo(Tela):
         self.poderes = []
         self.tiros = []
         self.moedas = []
+        self.name = "Tela de Jogo"
 
         # inicializando a pontuacao
         self.score = 0
@@ -70,16 +71,27 @@ class TelaDeJogo(Tela):
         pass
 
     def interpretarEventos(self, game):
-        pass
+        game.clock.tick(game.fps)
+
+        for event in pygame.event.get():
+            pos = pygame.mouse.get_pos()
+
+            # checa se o usuario quer sair do jogo
+            self.comportamentoBotaoDeSair(game, event)
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                # checa se o usuario quer tirar o som
+                self.comportamentoBotaoDeAudio(game, event, pos)
 
     def run(self, game):
-        self.interpretarEventos(game)
-        self.atualizar(game)
-        self.computarScore(game)
-        self.desenhar(game)
+        while game.telaAtual == self.name and not game.usuarioSaiu:
+            self.interpretarEventos(game)
+            self.atualizar(game)
+            self.computarScore(game)
+            self.desenhar(game)
 
     def desenhar(self, game):
-        self.desenharTelaBasica()
+        self.desenharTelaBasica(game)
         self.jogador.desenhar(game)
         pygame.display.flip()
 
