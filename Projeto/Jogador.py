@@ -53,25 +53,25 @@ class Jogador():
 
 
     # esse metodo atualiza as posicoes do jogador para que ele pule
-    def pular(self):
+    def pular(self, evento):
         """TODO"""
         pass
 
 
     # esse metodo atualiza as posicoes do jogador para que ele se mova para a direita
-    def moverDireita(self):
+    def moverDireita(self, evento):
         """TODO"""
         pass
 
 
     # esse metodo atualiza as posicoes do jogador para que ele se mova para a esquerda
-    def moverEsquerda(self):
+    def moverEsquerda(self, evento):
         """TODO"""
         pass
 
 
     # esse metodo faz com que o jogador dispare seu poder
-    def atirar(self, game):
+    def atirar(self, evento):
         # nao esquecer de checar se o personagem tem poderes (booleana self.poder contabiliza isso) para atirar
         """TODO"""
         pass

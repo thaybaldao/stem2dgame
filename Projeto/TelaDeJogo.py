@@ -57,6 +57,7 @@ class TelaDeJogo(Tela):
 
     def checarComportamentoJogador(self, game, evento):
         # verificar se o usuario pediu para o jogador fazer algum comando (andar para esquerda, andar para a direita, ou ainda, pular)
+        # chamar aqui o metodo que atualiza as coordenadas do jogador e faz ele se mover (jogador.atualizar(comandoDoUsuario))
         """TODO"""
         pass
 
