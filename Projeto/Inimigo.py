@@ -1,18 +1,32 @@
 from Cenario import *
+from Tiro import *
 import pygame
+import os
+import math
 
 class Inimigo(Cenario):
-    def __init__(self, x, y, imagem, tipo, vel):
-        super().__init__(x, y, imagem, tipo, vel)
+    def __init__(self, x, y, tipo, vel):
+        self.carregarImagemInimigo(tipo)
+        super().__init__(x, y, self.imagem, tipo, vel)
         self.vida = 3
+        self.tempo = pygame.time.get_ticks()
 
+    #carregar a imagem do inimigo
+    def carregarImagemInimigo(self,tipo):
+        nomeInimigo = 'inimigo_1.png'
+        nomeInimigo = nomeInimigo.replace("1", str(tipo))
+        self.imagem = pygame.image.load(os.path.join('Imagens', nomeInimigo))
+        self.imagem = pygame.transform.scale(self.imagem,
+                                              (math.floor(1269 / 3), math.floor(773 / 3)))  # redimensionar a imagem
 
-    def atualizar(self, game):
-        # fazer o inimigo pular para cima e para baixo incessantemente para que ele tenha algum
-        # tipo de movimento e, portanto, seja possivel diferencia-lo dos inimigos
-        """TODO"""
-        pass
-
+    def atualizar(self, tela):
+        dt = 1
+        self.x -= self.vel*dt
+        if self.x == 0-self.largura/2:
+            tela.inimigos.pop()
+        if self.tipo == 2 or self.tipo == 3:
+            if ((pygame.time.get_ticks()-self.tempo)%5000 < 150):
+                tela.tirosInimigo.append(Tiro(self.x, self.y, 'I', -10))
 
     # verifica as colisoes do personagem com o inimigo
     def checarColisoes(self, telaDeJogo):

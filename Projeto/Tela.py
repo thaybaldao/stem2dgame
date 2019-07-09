@@ -32,9 +32,9 @@ class Tela:
 
         # carrega a imagem do botao de audio de acordo com o status de audio do jogo
         if game.comAudio:
-            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Com_Som.png'))
+            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'audio_ligado.png'))
         else:
-            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Sem_Som.png'))
+            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'audio_desligado.png'))
         game.janela.blit(self.botaoSom, (740, 450))
 
 

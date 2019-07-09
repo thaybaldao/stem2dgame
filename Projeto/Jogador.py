@@ -1,6 +1,8 @@
 import pygame
+import math
 from Configuracoes import *
 from Obstaculo import *
+from Tiro import *
 from Inimigo import *
 from Vida import *
 from Impulsionador import *
@@ -9,8 +11,8 @@ vec = pygame.math.Vector2
 
 class Jogador():
     def __init__(self, game):
-        self.x = 150
-        self.y = 200
+        self.x = 48
+        self.y = Y_CHAO
         self.carregarImagemPersonagem(game)
         self.largura = self.imagem.get_width()
         self.altura = self.imagem.get_height()
@@ -19,7 +21,7 @@ class Jogador():
         self.pos = vec(self.x, self.y)
         self.vel = vec(0, 0)
         self.acc = vec(0, ACE_GRAV)
-        self.poder = 0
+        self.poder = 1
         self.ehInvencivel = False
         self.vidasExtra = 0
         self.cresceu = False
@@ -28,70 +30,58 @@ class Jogador():
     # carrega a imagem do personagem de acordo com a escolha do usuario
     def carregarImagemPersonagem(self, game):
         if game.tipoJogador == 'A' or game.tipoJogador == 'N':
-            self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_A.png'))
-            self.imagemInvencivel = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_A.png'))
-            # self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_A.png'))
-            # self.imagemInvencivelCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_A.png'))
-        # elif game.tipoJogador == 'B':
-        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_B.png'))
-        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_B.png'))
-        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_B.png'))
-        #     self.imagemInvencivelCresceu = pygame.image.load(
-        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_B.png'))
-        # elif game.tipoJogador == 'C':
-        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_C.png'))
-        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_C.png'))
-        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_C.png'))
-        #     self.imagemInvencivelCresceu = pygame.image.load(
-        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_C.png'))
-        # else:
-        #     self.imagem = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_D.png'))
-        #     self.imagemInvencivel  = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Invencivel_D.png'))
-        #     self.imagemCresceu = pygame.image.load(os.path.join('Imagens', 'Personagem_Principal_Cresceu_D.png'))
-        #     self.imagemInvencivelCresceu = pygame.image.load(
-        #         os.path.join('Imagens', 'Personagem_Principal_Invencivel_Cresceu_D.png'))
-
-
+            self.imagemF = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
+            self.imagemD = pygame.image.load(os.path.join('Imagens', 'personagem_principal_DIR_1.png'))
+            self.imagemE = pygame.image.load(os.path.join('Imagens', 'personagem_principal_ESQ_1.png'))
+            self.imagemF = pygame.transform.scale(self.imagemF, (math.floor(1269 / 3), math.floor(773 / 3))) #redimensionar a imagem
+            self.imagemD = pygame.transform.scale(self.imagemD, (math.floor(1269 / 3), math.floor(773 / 3)))
+            self.imagemE = pygame.transform.scale(self.imagemE, (math.floor(1269 / 3), math.floor(773 / 3)))
+            # carregar imagens para modo invencivel
+            self.imagemInvencivelF = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_FEC_1.png'))
+            self.imagemInvencivelD = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_DIR_1.png'))
+            self.imagemInvencivelE = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_ESQ_1.png'))
+            self.imagemInvencivelF = pygame.transform.scale(self.imagemInvencivelF, (math.floor(1269 / 3), math.floor(773 / 3))) #redimensionar a imagem
+            self.imagemInvencivelD = pygame.transform.scale(self.imagemInvencivelD, (math.floor(1269 / 3), math.floor(773 / 3)))
+            self.imagemInvencivelE = pygame.transform.scale(self.imagemInvencivelE, (math.floor(1269 / 3), math.floor(773 / 3)))
+            self.imagem = self.imagemF
     # esse metodo atualiza as posicoes do jogador para que ele pule
     def pular(self, evento):
-        """TODO"""
-        pass
-
-
-    # esse metodo atualiza as posicoes do jogador para que ele se mova para a direita
-    def moverDireita(self, evento):
-        """TODO"""
-        pass
-
-
-    # esse metodo atualiza as posicoes do jogador para que ele se mova para a esquerda
-    def moverEsquerda(self, evento):
-        """TODO"""
-        pass
-
+        if self.pos.y == Y_CHAO:
+            self.vel.y = VELOC_INICIAL_PULO
 
     # esse metodo faz com que o jogador dispare seu poder
-    def atirar(self, evento):
-        # nao esquecer de checar se o personagem tem poderes (booleana self.poder contabiliza isso) para atirar
-        """TODO"""
-        pass
+    def atirar(self, tiros):
+        if self.poder:
+            tiros.append(Tiro(self.x-self.largura/2, self.pos.y/2, 'A', 10))
 
 
     # verifica o comando dado pelo usuario e em que estado o jogador esta (pulando, parado, se movendo lateralmente ou atirando)
     # e chama o metodo correspondente para atualizar as posicoes do jogador
     def atualizar(self, game, comandoUsuario):
-        # nao esquecer de administrar o tempo de invencibilidade do jogador
-        """TODO"""
-        pass
+        # Equaçõe de Movimento
+        dt = 1
+        # Atualizar velocidade e posição do jogador
+        self.vel += self.acc*dt
+        self.pos += self.vel*dt
+        self.rect.midbottom = self.pos
+
+        if self.pos.y >= (Y_CHAO):
+            self.pos.y = (Y_CHAO)
+            self.vel.y = 0
 
 
     # desenha o jogador na tela com a imagem correspondente ao seu estado atual
     def desenhar(self, game):
-        if self.ehInvencivel == False and self.cresceu == False:
-            game.janela.blit(self.imagem, (self.rect.left, self.rect.top))
-        elif self.ehInvencivel == True and self.cresceu == True:
-            game.janela.blit(self.imagemInvencivelCresceu, (self.rect.left, self.rect.top))
+        # vetor com as imagens
+        if self.ehInvencivel == False:
+            self.images = [self.imagemF, self.imagemD, self.imagemE]
         elif self.ehInvencivel == True:
-            game.janela.blit(self.imagemInvencivel, (self.rect.left, self.rect.top))
+            self.images = [self.imagemInvencivelF, self.imagemInvencivelD, self.imagemInvencivelE]
+        # gerar efeito gradual no pulo
+        if self.pos.y == (Y_CHAO):
+            self.imagem = self.images[0]
+        elif self.pos.y < (Y_CHAO) and self.pos.y > (0.95*Y_CHAO):
+            self.imagem = self.images[1]
         else:
-            game.janela.blit(self.imagemCresceu, (self.rect.left, self.rect.top))
+            self.imagem = self.images[2]
+        game.janela.blit(self.imagem, (self.rect.left, self.rect.top))

@@ -10,6 +10,7 @@ from Crescimento import *
 from Poder import *
 from Tiro import *
 import pygame
+import random
 import os
 from pygame.locals import *
 
@@ -27,6 +28,7 @@ class TelaDeJogo(Tela):
         self.impulsionadores = []
         self.poderes = []
         self.tiros = []
+        self.tirosInimigo = []
         self.moedas = []
         self.comandoDoUsuario = 0
 
@@ -52,14 +54,18 @@ class TelaDeJogo(Tela):
 
     # cria itens do cenario na tela
     def criarCenario(self, game):
-        """TODO"""
-        pass
+        rand = random.randint(1,100)
+        if rand == 1:
+            self.inimigos.append(Inimigo(LARGURA_DA_TELA/2, Y_CHAO-300, random.randint(1, 4), 5))
 
     def checarComportamentoJogador(self, game, evento):
-        # verificar se o usuario pediu para o jogador fazer algum comando (andar para esquerda, andar para a direita, ou ainda, pular)
+        # verificar se o usuario pediu para o jogador fazer algum comando (atirar ou pular)
         # chamar aqui o metodo que atualiza as coordenadas do jogador e faz ele se mover (jogador.atualizar(comandoDoUsuario))
-        """TODO"""
-        pass
+        if evento != [] and evento.type == pygame.KEYDOWN: #verificar se há algo na fila de eventos e se há teclas precionadas
+            if evento.key == pygame.K_UP:
+                self.jogador.pular(evento)
+            elif evento.key == pygame.K_SPACE:
+                self.jogador.atirar(self.tiros)
 
 
     def checarColisoes(self):
@@ -74,6 +80,9 @@ class TelaDeJogo(Tela):
 
         for tiro in self.tiros:
             tiro.checarColisoes(self)
+
+        for tiroInimigo in self.tirosInimigo:
+            tiroInimigo.checarColisoes(self)
 
         for vida in self.vidas:
             vida.checarColisoes(self)
@@ -92,13 +101,16 @@ class TelaDeJogo(Tela):
             obstaculo.atualizar(game)
 
         for inimigo in self.inimigos:
-            inimigo.atualizar(game)
+            inimigo.atualizar(self)
 
         for poder in self.poderes:
             poder.atualizar(game)
 
         for tiro in self.tiros:
-            tiro.atualizar(game)
+            tiro.atualizar(self)
+
+        for tiroInimigo in self.tirosInimigo:
+            tiroInimigo.atualizar(self)
 
         for vida in self.vidas:
             vida.atualizar(game)
@@ -115,6 +127,7 @@ class TelaDeJogo(Tela):
 
         for evento in pygame.event.get():
             pos = pygame.mouse.get_pos()
+            #print(pos)
 
             # checa se o usuario quer sair do jogo
             self.comportamentoBotaoDeSair(game, evento)
@@ -133,13 +146,16 @@ class TelaDeJogo(Tela):
             obstaculo.desenhar(self)
 
         for inimigo in self.inimigos:
-            inimigo.desenhar(self)
+            inimigo.desenhar(game)
 
         for poder in self.poderes:
             poder.desenhar(self)
 
         for tiro in self.tiros:
-            tiro.desenhar(self)
+            tiro.desenhar(game)
+
+        for tiroInimigo in self.tirosInimigo:
+            tiroInimigo.desenhar(game)
 
         for vida in self.vidas:
             vida.desenhar(self)
