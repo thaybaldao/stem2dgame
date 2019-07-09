@@ -38,7 +38,7 @@ class AdministradorDoJogo:
         self.telaDeInicio = TelaDeInicio(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
         self.telaDeInstrucoes = TelaDeInstrucoes(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
         self.telaDeEscolhaDePersonagem = TelaDeEscolhaDePersonagem(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
-        self.telaDeJogo = TelaDeJogo(self, 'Tela_De_Jogo')
+        self.telaDeJogo = TelaDeJogo(self, 'cenario_2')
         self.telaDePerguntas = TelaDePerguntas(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
         self.telaResultadoDaPergunta = TelaResultadoDaPergunta(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
         self.telaDeFim = TelaDeFim(self, 'Tela_De_Jogo') # mudar para o background desta tela, quando existir
