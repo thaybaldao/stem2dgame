@@ -4,8 +4,8 @@ import pygame
 import os
 
 class Tela:
-    def __init__(self, game, nomeImagemDeFundo):
-        self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', nomeImagemDeFundo + '.png'))
+    def __init__(self):
+        self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', 'cenario_1.png'))
         self.administradorDeAudio = AdministradorDeAudio() # sempre que uma tela precisar utilizar algum som, basta chamar este objeto e algum metodo de sua classe
 
 
@@ -32,10 +32,7 @@ class Tela:
 
         # carrega a imagem do botao de audio de acordo com o status de audio do jogo
         if game.comAudio:
-            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Com_Som.png'))
+            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'audio_ligado.png'))
         else:
-            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'Sem_Som.png'))
+            self.botaoSom = pygame.image.load(os.path.join('Imagens', 'audio_desligado.png'))
         game.janela.blit(self.botaoSom, (740, 450))
-
-
-

@@ -9,8 +9,11 @@ class Vida(Cenario):
         self.atualizacaoBasica()
 
     # verifica as colisoes do personagem com as vidas
-    def checarColisoes(self, telaDeJogo):
+    def checarColisoes(self, telaDeJogo, game):
         # incrementar a variavel inteira telaDeJogo.jogador.vidasExtra caso ocorra a colisao do personagem com a vida
         # fazer a vida desaparecer depois da colisao
-        """TODO"""
-        pass
+
+        if self.rect.colliderect(telaDeJogo.jogador):
+            if telaDeJogo.jogador.vidasExtra < 3:
+                telaDeJogo.jogador.vidasExtra +=1
+            telaDeJogo.vidas.pop()

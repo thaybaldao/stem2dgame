@@ -11,8 +11,9 @@ class Impulsionador(Cenario):
 
 
     # verifica as colisoes do personagem com o impulsionador
-    def checarColisoes(self, telaDeJogo):
+    def checarColisoes(self, telaDeJogo, game):
         # fazer a variavel telaDeJogo.jogador.ehInvencivel ser verdadeira caso ocorra a colisao
         # fazer o impulsionador desaparecer depois da colisao
-        """"TODO"""
-        pass
+        if self.rect.colliderect(telaDeJogo.jogador):
+            telaDeJogo.jogador.ehInvencivel = True
+            telaDeJogo.impulsionadores.pop()
