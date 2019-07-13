@@ -31,7 +31,7 @@ class Tiro(Cenario):
 
 
     # verifica as colisoes do tiro com o inimigo
-    def checarColisoes(self, telaDeJogo, game):
+    def checarColisoes(self, telaDeJogo):
         # decrementa a variavel telaDeJogo.inimigo.vida a cada colisao do tiro com o inimigo
         # fazer o tiro desaparecer a cada colisao dele com o inimigo
         # fazer o inimigo desaparecer apos telaDeJogo.inimigo.vida ser zero

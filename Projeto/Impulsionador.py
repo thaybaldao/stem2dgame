@@ -2,8 +2,8 @@ from Cenario import *
 import pygame
 
 class Impulsionador(Cenario):
-    def __init__(self, x, y, imagem, tipo, vel):
-        super().__init__(x, y, imagem, tipo, vel)
+    def __init__(self, x, y, imagem, vel):
+        super().__init__(x, y, imagem, vel)
 
 
     def atualizar(self, game):

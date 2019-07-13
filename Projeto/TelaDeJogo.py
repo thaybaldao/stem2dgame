@@ -2,10 +2,8 @@ from Configuracoes import *
 from Tela import *
 from Jogador import *
 from Obstaculo import *
-from Inimigo import*
 from Vida import *
 from Impulsionador import *
-from Tiro import *
 import pygame
 import random
 import os
@@ -23,11 +21,10 @@ class TelaDeJogo(Tela):
         self.vidas = []
         self.vidasDisponiveis = []
         self.impulsionadores = []
-        self.poderes = []
         self.tiros = []
         self.tirosInimigo = []
-        self.moedas = []
         self.comandoDoUsuario = 0
+        self.tolerancia = 100
 
         # inicializando a pontuacao do jogo
         self.score = 0
@@ -51,13 +48,21 @@ class TelaDeJogo(Tela):
 
     # cria itens do cenario na tela
     def criarCenario(self, game):
-        rand = random.randint(1,100)
-        if rand == 1:
-            self.inimigos.append(Inimigo(LARGURA_DA_TELA/2, Y_CHAO-300, random.randint(1, 4), 5))
+        # rand = random.randint(1,100)
+        # if rand == 1:
+        #     self.inimigos.append(Inimigo(LARGURA_DA_TELA/2, Y_CHAO-300, random.randint(1, 4), 5))
+
+        r = random.randrange(0, 200)
+        if len(self.obstaculos) == 0 or self.obstaculos[-1].x + self.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
+            if r < 4:
+                self.obstaculos.append(Obstaculo(1300, 625, pygame.image.load(os.path.join('Imagens', 'obstaculo_1_1.png')), 5))
+            if r == 5:
+                self.obstaculos.append(Vida(1300, 625, pygame.image.load(os.path.join('Imagens', 'vida.png')), 5))
+
+
 
     def checarComportamentoJogador(self, game, evento):
         # verificar se o usuario pediu para o jogador fazer algum comando (atirar ou pular)
-        # chamar aqui o metodo que atualiza as coordenadas do jogador e faz ele se mover (jogador.atualizar(comandoDoUsuario))
         if evento != [] and evento.type == pygame.KEYDOWN: #verificar se há algo na fila de eventos e se há teclas precionadas
             if evento.key == pygame.K_UP:
                 self.jogador.pular(evento)
@@ -92,22 +97,19 @@ class TelaDeJogo(Tela):
 
 
     def atualizar(self, game):
-        self.jogador.atualizar(game, self.comandoDoUsuario)
+        self.jogador.atualizar()
 
         for obstaculo in self.obstaculos:
             obstaculo.atualizar(game)
 
         for inimigo in self.inimigos:
-            inimigo.atualizar(self)
-
-        for poder in self.poderes:
-            poder.atualizar(game)
+            inimigo.atualizar(game)
 
         for tiro in self.tiros:
-            tiro.atualizar(self)
+            tiro.atualizar(game)
 
         for tiroInimigo in self.tirosInimigo:
-            tiroInimigo.atualizar(self)
+            tiroInimigo.atualizar(game)
 
         for vida in self.vidas:
             vida.atualizar(game)
@@ -115,8 +117,6 @@ class TelaDeJogo(Tela):
         for impulsionador in self.impulsionadores:
             impulsionador.atualizar(game)
 
-        for moeda in self.moedas:
-            moeda.atualizar(game)
 
 
     def interpretarEventos(self, game):
@@ -134,19 +134,17 @@ class TelaDeJogo(Tela):
 
             # checa se o usuario quer tirar o som
             self.comportamentoBotaoDeAudio(game, evento, pos)
+            # print('pos 0: ', pos[0], ' pos1: ', pos[1] )
 
 
     def desenhar(self, game):
         self.desenharTelaBasica(game)
 
         for obstaculo in self.obstaculos:
-            obstaculo.desenhar(self)
+            obstaculo.desenhar(game)
 
         for inimigo in self.inimigos:
             inimigo.desenhar(game)
-
-        for poder in self.poderes:
-            poder.desenhar(self)
 
         for tiro in self.tiros:
             tiro.desenhar(game)
@@ -159,9 +157,6 @@ class TelaDeJogo(Tela):
 
         for impulsionador in self.impulsionadores:
             impulsionador.desenhar(self)
-
-        for moeda in self.moedas:
-            moeda.desenhar(self)
 
         self.jogador.desenhar(game)
 

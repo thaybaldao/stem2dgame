@@ -2,8 +2,6 @@ import pygame
 import math
 from Configuracoes import *
 from Obstaculo import *
-from Tiro import *
-from Inimigo import *
 from Vida import *
 from Impulsionador import *
 import os
@@ -32,17 +30,13 @@ class Jogador():
         self.imagemF = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
         self.imagemD = pygame.image.load(os.path.join('Imagens', 'personagem_principal_DIR_1.png'))
         self.imagemE = pygame.image.load(os.path.join('Imagens', 'personagem_principal_ESQ_1.png'))
-        self.imagemF = pygame.transform.scale(self.imagemF, (math.floor(1269 / 1.4), math.floor(773 / 1.4))) #redimensionar a imagem
-        self.imagemD = pygame.transform.scale(self.imagemD, (math.floor(1269 / 1.4), math.floor(773 / 1.4)))
-        self.imagemE = pygame.transform.scale(self.imagemE, (math.floor(1269 / 1.4), math.floor(773 / 1.4)))
         # carregar imagens para modo invencivel
         self.imagemInvencivelF = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_FEC_1.png'))
         self.imagemInvencivelD = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_DIR_1.png'))
         self.imagemInvencivelE = pygame.image.load(os.path.join('Imagens', 'personagem_principal_invencivel_ESQ_1.png'))
-        self.imagemInvencivelF = pygame.transform.scale(self.imagemInvencivelF, (math.floor(1269 / 3), math.floor(773 / 3))) #redimensionar a imagem
-        self.imagemInvencivelD = pygame.transform.scale(self.imagemInvencivelD, (math.floor(1269 / 3), math.floor(773 / 3)))
-        self.imagemInvencivelE = pygame.transform.scale(self.imagemInvencivelE, (math.floor(1269 / 3), math.floor(773 / 3)))
         self.imagem = self.imagemF
+
+
     # esse metodo atualiza as posicoes do jogador para que ele pule
     def pular(self, evento):
         if self.pos.y == Y_CHAO:
@@ -50,14 +44,13 @@ class Jogador():
 
     # esse metodo faz com que o jogador dispare seu poder
     def atirar(self, tiros):
-        if self.poder:
-            tiros.append(Tiro(self.x-self.largura/2, self.pos.y/2, 'A', 10))
+        tiros.append(Tiro(self.x-self.largura/2, self.pos.y/2, 'A', 10))
 
 
     # verifica o comando dado pelo usuario e em que estado o jogador esta (pulando, parado, se movendo lateralmente ou atirando)
     # e chama o metodo correspondente para atualizar as posicoes do jogador
-    def atualizar(self, game, comandoUsuario):
-        # Equaçõe de Movimento
+    def atualizar(self):
+        # Equações de Movimento
         dt = 1
         # Atualizar velocidade e posição do jogador
         self.vel += self.acc*dt
@@ -76,6 +69,7 @@ class Jogador():
             self.images = [self.imagemF, self.imagemD, self.imagemE]
         elif self.ehInvencivel == True:
             self.images = [self.imagemInvencivelF, self.imagemInvencivelD, self.imagemInvencivelE]
+
         # gerar efeito gradual no pulo
         if self.pos.y == (Y_CHAO):
             self.imagem = self.images[0]
@@ -83,4 +77,5 @@ class Jogador():
             self.imagem = self.images[1]
         else:
             self.imagem = self.images[2]
+
         game.janela.blit(self.imagem, (self.rect.left, self.rect.top))

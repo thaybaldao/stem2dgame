@@ -8,39 +8,35 @@ class TelaDeInstrucoes(Tela):
    def __init__(self):
        super().__init__()
        self.name = "Tela de Instrucoes"
-       self.fonte1 = self.font = pygame.font.Font(os.path.join('Fontes', '04B_30__.TTF'), 40)
-       #self.fonte2 = self.font = pygame.font.Font(os.path.join('Fontes', '04B_30__.TTF'), 20)
-       self.title = self.fonte1.render('INSTRUCOES', True, NAVY)
-       self.jogar = self.fonte1.render('JOGAR!', True, AZULBB)
-       self.voltar = self.fonte1.render('VOLTAR', True, AZULBB)
-       #self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'Play.png'))
+       fonte1 = self.font = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 70)
+       self.title = fonte1.render('INSTRUCOES', True, NAVY)
+       self.fonte2 = self.font = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 30)
+       self.voltar = self.fonte2.render('VOLTAR', True, AZULBB)
+       self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
+       self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
 
 
    # metodo para lidar com interacoes com o botao de jogar
    def comportamentoBotaoDeJogar(self, game, evento, pos):
-       if pos[0] > 200 and pos[0] < 400 and pos[1] > 600 and pos[1] < 640:
-           self.jogar = self.fonte1.render('JOGAR!', True, AZULBB)
+        if pos[0] > 1110 and pos[0] < 1180 and pos[1] > 630 and pos[1] < 700:
+            if evento.type != pygame.MOUSEBUTTONDOWN:
+                self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_brilho_1.png'))
+            else:
+                game.telaAtual = 'Tela de Jogo'
+        else:
+            self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
 
-       else:
-           self.jogar = self.fonte1.render('JOGAR!', True, NAVY)
-
-       if evento.type == pygame.MOUSEBUTTONDOWN:
-           # check if user wants to play
-           if pos[0] > 200 and pos[0] < 400 and pos[1] > 600 and pos[1] < 640:
-               game.telaAtual = 'Tela de Perguntas'
 
    # metodo para lidar com interacoes com o botao que redireciona para a tela de inicio
    def comportamentoBotaoVoltarTelaInicio(self, game, evento, pos):
-       if pos[0] > 600 and pos[0] < 800 and pos[1] > 600 and pos[1] < 640:
-           self.voltar = self.fonte1.render('VOLTAR', True, AZULBB)
+        if pos[0] > 50 and pos[0] < 150 and pos[1] > 30 and pos[1] < 55:
+            if evento.type != pygame.MOUSEBUTTONDOWN:
+                self.voltar = self.fonte2.render('VOLTAR', True, AMARELO)
+            else:
+                game.telaAtual = 'Tela de Inicio'
 
-       else:
-           self.voltar = self.fonte1.render('VOLTAR', True, NAVY)
-
-       if evento.type == pygame.MOUSEBUTTONDOWN:
-           # check if user wants to play
-           if pos[0] > 600 and pos[0] < 800 and pos[1] > 600 and pos[1] < 640:
-               game.telaAtual = 'Tela de Inicio'
+        else:
+            self.voltar = self.fonte2.render('VOLTAR', True, AZULBB)
 
 
    def interpretarEventos(self, game):
@@ -61,30 +57,33 @@ class TelaDeInstrucoes(Tela):
            # checa se o usuario quer voltar para a tela de inicio
            self.comportamentoBotaoVoltarTelaInicio(game, evento, pos)
 
-
-   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
-   def desenharTela(self, game):
-       game.janela.blit(self.jogar, (200, 600))
-       game.janela.blit(self.voltar, (600, 600))
+           # print("pos0: ", pos[0], " pos1: ", pos[1])
 
 
    def imprimirInstrucoes(self, game, num, text):
-        fonte2 = pygame.font.Font(os.path.join('Fontes', '04B_30__.TTF'), 20)
-        ins = fonte2.render(text, True, NAVY)
-        game.janela.blit(ins, (70, 40 + 75*num))
+        ins = self.fonte2.render(text, True, AZULBB)
+        game.janela.blit(ins, (70, 170 + 100*num))
+
+
+
+   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+   def desenharTela(self, game):
+       game.janela.blit(self.title, (500, 60))
+       game.janela.blit(self.voltar, (50, 30))
+       game.janela.blit(self.jogador, (X_CHAO, 350))
+       self.imprimirInstrucoes(game, 0, '- Evite os obstaculos clicando na seta para cima para pular.')
+       self.imprimirInstrucoes(game, 1, '- Pressione a barra de espaco para atirar nos inimigos.')
+       self.imprimirInstrucoes(game, 2, '- Colete coracoes para ter a possibilidade de ganhar vidas extras.')
+       self.imprimirInstrucoes(game, 3, '- Colete boosters para ficar invencivel por 15s.')
+       self.imprimirInstrucoes(game, 4, '- Clique no icone de som para desliga-lo.')
+       game.janela.blit(self.botaoPlay, (1110, 630))
+
 
    def desenhar(self, game):
        self.desenharTelaBasica(game)
        self.desenharTela(game)
-       game.janela.blit(self.title, (200, 20))
-       self.imprimirInstrucoes(game, 1, '- Clique na barra de espaco para pular.')
-       self.imprimirInstrucoes(game, 2, '- Evite os obstáculos!')
-       self.imprimirInstrucoes(game, 3, '- Colete coracoes para ter a possibilidade de ganhar vidas extras.')
-       self.imprimirInstrucoes(game, 4, '- Colete boosters para ficar invencivel por 15s.')
-       self.imprimirInstrucoes(game, 5, '- Colete estrelas para ficar invencivel por 15s.')
-       self.imprimirInstrucoes(game, 6, '- Clique no icone de som para desliga-lo.')
-
        pygame.display.flip()
+
 
    def run(self, game):
        while game.telaAtual == self.name and not game.usuarioSaiu:

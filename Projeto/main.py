@@ -25,34 +25,28 @@ class AdministradorDoJogo:
 
         # initializing constantes do jogo
         self.telaAtual = 'Tela de Inicio'
+        self.tela = 0
         self.usuarioSaiu = False
         self.comAudio = True
-
-
-        # inicializando telas
-        self.telaDeInicio = TelaDeInicio()
-        self.telaDeInstrucoes = TelaDeInstrucoes()
-        self.telaDeJogo = TelaDeJogo(self)
-        self.telaDePerguntas = TelaDePerguntas()
-        self.telaResultadoDaPergunta = TelaResultadoDaPergunta()
-        self.telaDeFim = TelaDeFim()
 
 
     def run(self):
 
         while not self.usuarioSaiu:
             if self.telaAtual == 'Tela de Inicio':
-                self.telaDeInicio.run(self)
+                self.tela = TelaDeInicio()
             elif self.telaAtual == 'Tela de Instrucoes':
-                self.telaDeInstrucoes.run(self)
+                self.tela = TelaDeInstrucoes()
             elif self.telaAtual == 'Tela de Jogo':
-                self.telaDeJogo.run(self)
+                self.tela = TelaDeJogo(self)
             elif self.telaAtual == 'Tela de Perguntas':
-                self.telaDePerguntas.run(self)
+                self.tela = TelaDePerguntas()
             elif self.telaAtual == 'Tela Resultado da Pergunta':
-                self.telaResultadoDaPergunta.run(self)
+                self.tela = TelaResultadoDaPergunta()
             else:
-                self.telaDeFim.run(self)
+                self.tela = TelaDeFim()
+
+            self.tela.run(self)
 
         pygame.quit()
 

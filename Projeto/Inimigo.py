@@ -29,19 +29,15 @@ class Inimigo(Cenario):
                 tela.tirosInimigo.append(Tiro(self.x, self.y, 'I', -10))
 
     # verifica as colisoes do personagem com o inimigo
-    def checarColisoes(self, telaDeJogo, game):
+    def checarColisoes(self, telaDeJogo):
         # lembrar que se o personagem tiver vidas e se chocar contra inimigos, ele nao deve morrer mas sim perder uma vida
         # lembrar que se a booleana telaDeJogo.jogador.ehInvencivel for verdadeira as colisoes com inimigos devem ser ignoradas
-        # lembrar que se a booleana telaDeJogo.jogador.cresceu for verdadeira as colisoes com inimigos devem apenas levar esta booleana
-        # a se tornar falsa, de modo que o jogador voltara a ser pequeno
         if self.rect.colliderect(telaDeJogo.jogador):
             if telaDeJogo.jogador.ehInvencivel == True:
                 telaDeJogo.inimigos.pop()
             else:
-                if telaDeJogo.jogador.cresceu == True:
-                    telaDeJogo.inimigos.pop()
-                    telaDeJogo.jogador.cresceu = False
-
-                else:
+                if telaDeJogo.jogador.vidasExtra > 0:
                     telaDeJogo.inimigos.pop()
                     telaDeJogo.jogador.vidasExtra -= 1
+                else:
+                    game.telaAtual = 'Tela de Fim'

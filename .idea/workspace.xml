@@ -3,81 +3,67 @@
   <component name="ChangeListManager">
     <list default="true" id="b5f87016-7380-4c2c-8908-9c5b9f608a5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Background.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Bloco_1.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Bloco_2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Bloco_3.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Bloquinho.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Chao.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Inicio_Jogo.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/No_Sound.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2/Obstaculo2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2/Obstaculo2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2/Obstaculo2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2/Obstaculo2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo2/Obstaculo2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo3.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo3/Obstaculo3.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo3/Obstaculo3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo3/Obstaculo3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo4/Obstaculo4.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Obstaculo4/Obstaculo4_1.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Personagem_Principal.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Plataforma.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Play.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Replay.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Sound.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Star.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Triangulo.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Triangulos_inverso.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/Vida.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/X_button.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Artes/end_screen.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Paleta/537b65d3b70ee8a0092bbd81b9448844.ase" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Paleta/Degradê.grd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Cenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Cenario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Configuracoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Configuracoes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Crescimento.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/04B_30__.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Best_Score.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Com_Som.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Game_Over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Impulsionador.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Instrucoes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Personagem_Principal_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Personagem_Principal_Invencivel_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Plataforma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Play1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Replay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Replay1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Sem_Som.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Tela_De_Jogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Triangulo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Triangulo_Danger_Zone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Triangulo_Invertido_Danger_Zone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Triangulos_inverso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/Vida.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/X_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/X_button1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/alternativa_A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/alternativa_A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/alternativa_B.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/alternativa_B.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/alternativa_C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/alternativa_C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/alternativa_D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/alternativa_D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/audio_desligado.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/audio_desligado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/audio_ligado.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/audio_ligado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/cenario_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/cenario_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/invencibilidade_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/invencibilidade_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/invencibilidade_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/invencibilidade_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_ESQ_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_FEC_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_DIR_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_ESQ_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/personagem_principal_invencivel_FEC_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/play1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/replay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/replay_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/replay_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/tiro.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/tiro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/vida.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/vida.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/voltar.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Impulsionador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Impulsionador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Inimigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Inimigo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Inimigo.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Jogador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Jogador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Moeda.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Obstaculo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Obstaculo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Poder.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Tela.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tela.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeEscolhaDePersonagem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeFim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeFim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeMudancaDeNivel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Tiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tiro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Tiro.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Vida.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Vida.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/main.py" afterDir="false" />
     </list>
@@ -93,19 +79,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/Configuracoes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInicio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+            <state relative-caret-position="369">
+              <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="45" />
               <folding>
                 <element signature="e#29#47#0" expanded="true" />
               </folding>
@@ -114,89 +91,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py">
+        <entry file="file://$PROJECT_DIR$/Projeto/Configuracoes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="83" column="50" lean-forward="true" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/Tiro.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/Imagens/vida.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/TelaDeJogo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/Inimigo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/Jogador.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Projeto/main.py">
+        <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="58" column="11" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="55" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projeto/TelaDeFim.py">
+        <entry file="file://$PROJECT_DIR$/Projeto/Tela.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="73" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+            <state relative-caret-position="200">
+              <caret line="14" column="116" selection-start-line="14" selection-start-column="116" selection-end-line="14" selection-end-column="116" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/TelaDeJogo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="136" column="11" lean-forward="true" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_2.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/Imagens/obstaculo_1_1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_3.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_4.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projeto/Jogador.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-486">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,9 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>startSc</find>
-      <find>title</find>
-      <find>reset</find>
       <find>pastSO</find>
       <find>pastSound</find>
       <find>run</find>
@@ -243,6 +205,9 @@
       <find>vec</find>
       <find>04B_30__.TTF</find>
       <find>tipoJo</find>
+      <find>tipoJoga</find>
+      <find>tipo</find>
+      <find>comandoDoUsuario</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,26 +246,26 @@
         <option value="$PROJECT_DIR$/Projeto/ResetScreen.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDeEscolhaDePersonagem.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDeMudancaDeNivel.py" />
-        <option value="$PROJECT_DIR$/Projeto/Cenario.py" />
-        <option value="$PROJECT_DIR$/Projeto/Impulsionador.py" />
         <option value="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" />
         <option value="$PROJECT_DIR$/Projeto/Crescimento.py" />
         <option value="$PROJECT_DIR$/Projeto/Moeda.py" />
-        <option value="$PROJECT_DIR$/Projeto/Obstaculo.py" />
         <option value="$PROJECT_DIR$/Projeto/Poder.py" />
-        <option value="$PROJECT_DIR$/Projeto/Vida.py" />
-        <option value="$PROJECT_DIR$/Projeto/Tiro.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDeFim.py" />
+        <option value="$PROJECT_DIR$/Projeto/main.py" />
+        <option value="$PROJECT_DIR$/Projeto/Obstaculo.py" />
+        <option value="$PROJECT_DIR$/Projeto/Vida.py" />
+        <option value="$PROJECT_DIR$/Projeto/Impulsionador.py" />
+        <option value="$PROJECT_DIR$/Projeto/Cenario.py" />
+        <option value="$PROJECT_DIR$/Projeto/Inimigo.py" />
+        <option value="$PROJECT_DIR$/Projeto/Tiro.py" />
         <option value="$PROJECT_DIR$/Projeto/Tela.py" />
+        <option value="$PROJECT_DIR$/Projeto/Jogador.py" />
         <option value="$PROJECT_DIR$/Projeto/Configuracoes.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDeInicio.py" />
-        <option value="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" />
-        <option value="$PROJECT_DIR$/Projeto/Inimigo.py" />
-        <option value="$PROJECT_DIR$/Projeto/Jogador.py" />
         <option value="$PROJECT_DIR$/Projeto/TelaDeJogo.py" />
-        <option value="$PROJECT_DIR$/Projeto/main.py" />
+        <option value="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" />
       </list>
     </option>
   </component>
@@ -425,12 +390,12 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3846154" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07636967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2537797" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2537797" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.041036718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -445,185 +410,49 @@
       <window_info anchor="right" id="R Graphics" order="3" weight="0.32977587" />
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3846154" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2537797" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.041036718" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.32977587" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Instrucoes.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Obstaculo2.png" />
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Obstaculo2_1.png" />
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Sem_Som.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Personagem_Principal_Invencivel_A.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Plataforma.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Play.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Play1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Replay.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Replay1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Titulo.png" />
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Impulsionador.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Triangulo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Triangulo_Danger_Zone.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Triangulos_inverso.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Vida.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/X_button.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/X_button1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Triangulo_Invertido_Danger_Zone.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Personagem_Principal_A.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Vida.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/X_button.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/X_button1.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Triangulo_Invertido_Danger_Zone.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Personagem_Principal_A.png" />
     <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Tela.py" />
     <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Espinhos_Plat.png" />
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Com_Som.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Tela_De_Jogo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeMudancaDeNivel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" selection-end-line="52" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeEscolhaDePersonagem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Crescimento.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Moeda.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Poder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Com_Som.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/Tela_De_Jogo.png" />
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeMudancaDeNivel.py" />
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeEscolhaDePersonagem.py" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Crescimento.py" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Moeda.py" />
+    <entry file="file://$PROJECT_DIR$/Projeto/Poder.py" />
     <entry file="file://$PROJECT_DIR$/Projeto/AdministradorDeAudio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Cenario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Impulsionador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Obstaculo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Vida.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDePerguntas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -641,19 +470,24 @@
     <entry file="file://$PROJECT_DIR$/Projeto/Imagens/replay.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Tela.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="87" selection-start-line="36" selection-start-column="87" selection-end-line="36" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/vida.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/inimigo_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/inimigo_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/inimigo_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/inimigo_1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Projeto/TelaDeFim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="240">
           <caret line="19" column="73" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -661,70 +495,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Configuracoes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInicio.py">
+    <entry file="file://$PROJECT_DIR$/Projeto/Vida.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
-          <folding>
-            <element signature="e#29#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/vida.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="83" column="50" lean-forward="true" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Tiro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Jogador.py">
+    <entry file="file://$PROJECT_DIR$/Projeto/Impulsionador.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Cenario.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeJogo.py">
+    <entry file="file://$PROJECT_DIR$/Projeto/Inimigo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state>
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Inimigo.py">
+    <entry file="file://$PROJECT_DIR$/Projeto/Tiro.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="210">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -733,10 +546,129 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Projeto/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="540">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDePerguntas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/play_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/play_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/play_brilho_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/play_brilho_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/voltar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/volta.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/play_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/personagem_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/personagem_principal_DIR_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Obstaculo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/cenario_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Imagens/obstaculo_1_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Tela.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="116" selection-start-line="14" selection-start-column="116" selection-end-line="14" selection-end-column="116" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Configuracoes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInicio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="45" />
+          <folding>
+            <element signature="e#29#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/Jogador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeJogo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="136" column="11" lean-forward="true" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
