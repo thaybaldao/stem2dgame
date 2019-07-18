@@ -1,4 +1,5 @@
 import pygame
+import os
 from Configuracoes import *
 
 # quaisquer itens que aparecem na tela do jogo, exceto background, botoes e jogador sao classes derivadas da classe Cenario
@@ -9,7 +10,7 @@ class Cenario:
         self.imagem = imagem
         self.largura = imagem.get_width()
         self.altura = imagem.get_height()
-        self.rect = pygame.Rect(self.x+self.largura/6, self.y+self.altura/6, 2*self.largura/3, 2*self.altura/3) # retangulo de colisoes
+        self.rect = pygame.Rect(self.x, self.y, self.largura, self.altura) # retangulo de colisoes
         self.vel = vel  # velocidade de atualizacao horizontal na tela
 
 

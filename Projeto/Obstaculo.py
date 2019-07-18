@@ -11,15 +11,16 @@ class Obstaculo(Cenario):
 
 
     # verifica as colisoes do personagem principal com obstaculos do cenario
-    def checarColisoes(self, telaDeJogo, game):
+    def checarColisoes(self, game):
         # lembrar que se o personagem tiver vidas e se chocar contra os obstaculos, ele nao deve morrer mas sim perder uma vida
         # lembrar que se a booleana telaDeJogo.jogador.ehInvencivel for verdadeira as colisoes com obstaculos devem ser ignoradas
-        if self.rect.colliderect(telaDeJogo.jogador):
-            if telaDeJogo.jogador.ehInvencivel == True:
-                telaDeJogo.inimigos.pop()
-            else:
-                if telaDeJogo.jogador.vidasExtra > 0:
-                    telaDeJogo.inimigos.pop()
-                    telaDeJogo.jogador.vidasExtra -= 1
+        if self.rect.colliderect(game.jogador):
+            if not game.ehInvencivel:
+                if game.vidasExtras > 0:
+                    game.obstaculos.pop()
+                    game.vidasExtras -= 1
                 else:
+                    game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'death.wav'), game)
+                    pygame.time.wait(3100)
+                    game.ultimaTela = 'Tela de Jogo'
                     game.telaAtual = 'Tela de Fim'

@@ -11,9 +11,11 @@ class Impulsionador(Cenario):
 
 
     # verifica as colisoes do personagem com o impulsionador
-    def checarColisoes(self, telaDeJogo, game):
-        # fazer a variavel telaDeJogo.jogador.ehInvencivel ser verdadeira caso ocorra a colisao
+    def checarColisoes(self, game):
+        # fazer a variavel game.ehInvencivel ser verdadeira caso ocorra a colisao
         # fazer o impulsionador desaparecer depois da colisao
-        if self.rect.colliderect(telaDeJogo.jogador):
-            telaDeJogo.jogador.ehInvencivel = True
-            telaDeJogo.impulsionadores.pop()
+        if self.rect.colliderect(game.jogador):
+            game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'boost.wav'), game)
+            pygame.time.wait(1500)
+            game.ehInvencivel = True
+            game.impulsionadores.pop()

@@ -22,6 +22,8 @@ class TelaDeInstrucoes(Tela):
             if evento.type != pygame.MOUSEBUTTONDOWN:
                 self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_brilho_1.png'))
             else:
+                game.novoJogo()
+                game.ultimaTela = 'Tela de Instrucoes'
                 game.telaAtual = 'Tela de Jogo'
         else:
             self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
@@ -33,6 +35,7 @@ class TelaDeInstrucoes(Tela):
             if evento.type != pygame.MOUSEBUTTONDOWN:
                 self.voltar = self.fonte2.render('VOLTAR', True, AMARELO)
             else:
+                game.ultimaTela = 'Tela de Instrucoes'
                 game.telaAtual = 'Tela de Inicio'
 
         else:

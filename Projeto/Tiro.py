@@ -30,13 +30,13 @@ class Tiro(Cenario):
             tela.tirosInimigo.pop()
 
 
-    # verifica as colisoes do tiro com o inimigo
-    def checarColisoes(self, telaDeJogo):
-        # decrementa a variavel telaDeJogo.inimigo.vida a cada colisao do tiro com o inimigo
-        # fazer o tiro desaparecer a cada colisao dele com o inimigo
-        # fazer o inimigo desaparecer apos telaDeJogo.inimigo.vida ser zero
-        if self.rect.colliderect(telaDeJogo.inimigo):
-            telaDeJogo.inimigo.vida -=1
-            if telaDeJogo.inimigo.vida < 1:
-                telaDeJogo.inimigos.pop()
-            telaDeJogo.tiros.pop()
+    # # verifica as colisoes do tiro com o inimigo
+    # def checarColisoes(self, game):
+    #     # decrementa a variavel telaDeJogo.inimigo.vida a cada colisao do tiro com o inimigo
+    #     # fazer o tiro desaparecer a cada colisao dele com o inimigo
+    #     # fazer o inimigo desaparecer apos telaDeJogo.inimigo.vida ser zero
+    #     if game.rect.colliderect(game.inimigo):
+    #         game.inimigo.vida -=1
+    #         if game.inimigo.vida < 1:
+    #             game.inimigos.pop()
+    #         game.tiros.pop()

@@ -1,22 +1,21 @@
 from Configuracoes import *
-from AdministradorDeAudio import *
 import pygame
 import os
 
 class Tela:
     def __init__(self):
         self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', 'cenario_1.png'))
-        self.administradorDeAudio = AdministradorDeAudio() # sempre que uma tela precisar utilizar algum som, basta chamar este objeto e algum metodo de sua classe
-
 
     # metodo para lidar com interacoes com o botao de audio
     # pode ser utilizado em qualquer tela
     def comportamentoBotaoDeAudio(self, game, evento, pos):
+        # print("pos0: ", pos[0], " pos1: ", pos[1])
         if evento.type == pygame.MOUSEBUTTONDOWN and pos[0] > 1200 and pos[0] < 1230 and pos[1] > 20 and pos[1] < 45 or pygame.key.get_pressed()[pygame.K_m]:
             if game.comAudio:
-                game.comAudio = False
+                game.administradorDeAudio.muteSound(game)
             else:
-                game.comAudio = True
+                game.administradorDeAudio.unmuteSound(game)
+
 
     # metodo para lidar com interacoes com o botao de sair
     # pode ser utilizado em qualquer tela

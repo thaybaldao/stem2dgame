@@ -4,7 +4,7 @@ import pygame
 import os
 
 class TelaDeInicio(Tela):
-   def __init__(self):
+   def __init__(self, game):
        super().__init__()
        self.name = 'Tela de Inicio'
        self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
@@ -14,6 +14,9 @@ class TelaDeInicio(Tela):
        self.inst = self.fonte2.render('INSTRUÇÕES', True, AZULBB)
        self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
 
+       game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'menuLoop.wav'), game)
+
+
 
    # metodo para lidar com interacoes com o botao que direciona para a tela de instrucoes
    def comportamentoBotaoDeInstrucoes(self, game, evento, pos):
@@ -21,6 +24,7 @@ class TelaDeInicio(Tela):
            if evento.type != pygame.MOUSEBUTTONDOWN:
                 self.inst = self.fonte2.render('INSTRUCOES', True, AMARELO)
            else:
+               game.ultimaTela = 'Tela de Inicio'
                game.telaAtual = 'Tela de Instrucoes'
        else:
            self.inst = self.fonte2.render('INSTRUCOES', True, AZULBB)
@@ -32,6 +36,8 @@ class TelaDeInicio(Tela):
            if evento.type != pygame.MOUSEBUTTONDOWN:
                 self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'play_brilho_1.png'))
            else:
+               game.novoJogo()
+               game.ultimaTela = 'Tela de Inicio'
                game.telaAtual = 'Tela de Jogo'
        else:
            self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'play_1.png'))

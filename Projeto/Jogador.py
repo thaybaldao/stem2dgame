@@ -15,14 +15,10 @@ class Jogador():
         self.largura = self.imagem.get_width()
         self.altura = self.imagem.get_height()
         self.rect = pygame.Rect(self.x, self.y, self.largura, self.altura)  # retangulo de colisoes
-        self.rect.center = (self.x, self.y)
-        self.pos = vec(self.x, self.y)
+        self.rect.center = (self.x + self.largura/2, self.y + self.altura/2)
+        self.pos = vec(self.x + self.largura/2, self.y + self.altura/2)
         self.vel = vec(0, 0)
         self.acc = vec(0, ACE_GRAV)
-        self.poder = 1
-        self.ehInvencivel = False
-        self.vidasExtra = 0
-        self.cresceu = False
 
 
     # carrega a imagem do personagem de acordo com a escolha do usuario
@@ -38,7 +34,7 @@ class Jogador():
 
 
     # esse metodo atualiza as posicoes do jogador para que ele pule
-    def pular(self, evento):
+    def pular(self):
         if self.pos.y == Y_CHAO:
             self.vel.y = VELOC_INICIAL_PULO
 
@@ -65,9 +61,10 @@ class Jogador():
     # desenha o jogador na tela com a imagem correspondente ao seu estado atual
     def desenhar(self, game):
         # vetor com as imagens
-        if self.ehInvencivel == False:
+        if game.ehInvencivel == False:
             self.images = [self.imagemF, self.imagemD, self.imagemE]
-        elif self.ehInvencivel == True:
+        elif game.ehInvencivel == True:
+
             self.images = [self.imagemInvencivelF, self.imagemInvencivelD, self.imagemInvencivelE]
 
         # gerar efeito gradual no pulo
@@ -79,3 +76,4 @@ class Jogador():
             self.imagem = self.images[2]
 
         game.janela.blit(self.imagem, (self.rect.left, self.rect.top))
+        pygame.draw.rect(game.janela, (255, 0, 0), self.rect, 2)
