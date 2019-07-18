@@ -86,7 +86,7 @@ class TelaDeJogo(Tela):
             elif r < 22 and not game.ehInvencivel and game.score > 30 and game.score % 5 == 0 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
                  game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA, 150 + 5*r, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
         elif len(game.inimigos) == 0 and self.tempoDeBatalha > 0:
-            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 600, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, 5*game.dvel))
+            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, 5*game.dvel))
 
 
     def checarComportamentoJogador(self, game, evento):

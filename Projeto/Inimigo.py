@@ -12,10 +12,7 @@ class Inimigo(Cenario):
 
 
     def atualizar(self, tela):
-        dt = 1
-        self.x -= self.vel*dt
-        if self.x == 0-self.largura/2:
-            tela.inimigos.pop()
+        self.atualizacaoBasica()
 
     # verifica as colisoes do personagem com o inimigo
     def checarColisoes(self, game):
@@ -23,11 +20,7 @@ class Inimigo(Cenario):
         # lembrar que se a booleana game.ehInvencivel for verdadeira as colisoes com inimigos devem ser ignoradas
         if self.rect.colliderect(game.jogador):
             if not game.ehInvencivel:
-                if game.vidasExtras > 0:
-                    game.inimigos.pop()
-                    game.vidasExtras -= 1
-                else:
-                    game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'death.wav'), game)
-                    pygame.time.wait(3100)
-                    game.ultimaTela = 'Tela de Jogo'
-                    game.telaAtual = 'Tela de Fim'
+                game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'death.wav'), game)
+                pygame.time.wait(3100)
+                game.ultimaTela = 'Tela de Jogo'
+                game.telaAtual = 'Tela de Fim'
