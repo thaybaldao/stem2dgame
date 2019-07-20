@@ -282,7 +282,7 @@ class TelaDeJogo(Tela):
                 game.dvel += 1
 
             # iniciar batalhas
-            if not self.batalha and time % 1800 == 0:
+            if not self.batalha and time % 1200 == 0:
                 self.telaBatalha(game)
 
 
