@@ -1,41 +1,80 @@
-from Configuracoes import *
+#from Configuracoes import *
 from Tela import *
 import pygame
 import os
 
 
 class TelaResultadoDaPergunta(Tela):
-    def __init__(self, game, nomeImagemDeFundo):
-        super().__init__(game, nomeImagemDeFundo)
-        self.name = 'Tela Resultado da Pergunta'
+   def __init__(self):
+       super().__init__()
+       self.name = 'Tela Resultado da Pergunta'
+       self.fonte1 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 95)
+       self.fonte2 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 60)
+       self.fonte3 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 50)
+       self.respCorreta = self.fonte1.render('RESPOSTA CORRETA!', True, AMARELO)
+       self.mensCorreta = self.fonte2.render('Desfrute de uma vida extra!', True, PRETO)
+       self.respIncorreta = self.fonte1.render('RESPOSTA INCORRETA...', True, AMARELO)
+       self.mensIncorreta = self.fonte2.render('Tente novamente...', True, PRETO)
+       self.continuar = self.fonte3.render('CONTINUAR', True, AZULBB)
+       self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
 
 
-    def interpretarEventos(self, game):
-        game.clock.tick(game.fps)
-
-        for evento in pygame.event.get():
-            pos = pygame.mouse.get_pos()
-
-            # checa se o usuario quer sair do jogo
-            self.comportamentoBotaoDeSair(game, evento)
-
-            # checa se o usuario quer tirar o som
-            self.comportamentoBotaoDeAudio(game, evento, pos)
-
-
-    # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
-    def desenharTela(self, game):
-        """TODO"""
-        pass
+   def comportamentoBotaoContinuar(self, game, evento, pos):
+       if pos[0] > 940 and pos[0] < 1180 and pos[1] > 650 and pos[1] < 690:
+           if evento.type != pygame.MOUSEBUTTONDOWN:
+               self.continuar = self.fonte3.render('CONTINUAR', True, AMARELO)
+           else:
+                if game.respostaCorreta == game.respostaUsuario:
+                    game.ultimaTela = 'Tela Resultado da Pergunta'
+                    game.telaAtual = 'Tela de Jogo'
+                else:
+                    game.ultimaTela = 'Tela Resultado da Pergunta'
+                    game.telaAtual = 'Tela de Fim'
+       else:
+           self.continuar = self.fonte3.render('CONTINUAR', True, AZULBB)
 
 
-    def desenhar(self, game):
-        self.desenharTelaBasica(game)
-        self.desenharTela(game)
-        pygame.display.flip()
+   def interpretarEventos(self, game):
+       game.clock.tick(game.fps)
+
+       for evento in pygame.event.get():
+           pos = pygame.mouse.get_pos()
+
+           # checa se o usuario quer sair do jogo
+           self.comportamentoBotaoDeSair(game, evento)
+
+           # checa se o usuario quer tirar o som
+           self.comportamentoBotaoDeAudio(game, evento, pos)
+
+           self.comportamentoBotaoContinuar(game, evento, pos)
 
 
-    def run(self, game):
-        while game.telaAtual == self.name and not game.usuarioSaiu:
-            self.interpretarEventos(game)
-            self.desenhar(game)
+
+   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+   def desenharTela(self, game):
+       game.janela.blit(self.continuar, (940, 650))
+
+       # Se a resposta for a correta, desenhar o aviso de parabéns
+       if game.respostaCorreta == game.respostaUsuario:
+           game.janela.blit(self.respCorreta, (210, 200))
+           game.janela.blit(self.mensCorreta, (230, 430))
+
+       #caso contrário, desenhar o aviso de :(
+       else:
+           game.janela.blit(self.respIncorreta, (200, 200))
+           game.janela.blit(self.mensIncorreta, (380, 430))
+
+
+   def desenhar(self, game):
+       self.desenharTelaBasica(game)
+       self.desenharTela(game)
+       pygame.display.flip()
+
+
+   def run(self, game):
+       if game.respostaCorreta == game.respostaUsuario:
+           game.vidasExtras += 1
+
+       while game.telaAtual == self.name and not game.usuarioSaiu:
+           self.interpretarEventos(game)
+           self.desenhar(game)
