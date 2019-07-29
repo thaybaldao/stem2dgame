@@ -29,6 +29,7 @@ class AdministradorDoJogo:
         self.tela = 0
         self.usuarioSaiu = False
         self.comAudio = True
+        self.bestScore = 0
 
         self.administradorDeAudio = AdministradorDeAudio()
 
@@ -99,9 +100,8 @@ class AdministradorDoJogo:
 
     def novoJogo(self):
         self.score = 0
-        self.bestScore = 0
         self.aparecimentoElementos = 50
-        self.vidasExtras = 0
+        self.vidasExtras = 3
         self.ehInvencivel = False
         self.respostaCorreta = 0
         self.respostaUsuario = 0

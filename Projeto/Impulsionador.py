@@ -15,7 +15,11 @@ class Impulsionador(Cenario):
         # fazer a variavel game.ehInvencivel ser verdadeira caso ocorra a colisao
         # fazer o impulsionador desaparecer depois da colisao
         if self.rect.colliderect(game.jogador):
-            game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'boost.wav'), game)
-            pygame.time.wait(1500)
-            game.ehInvencivel = True
-            game.impulsionadores.pop()
+            collisions = pygame.sprite.spritecollide(game.jogador, game.impulsionadores, False)
+            callback = pygame.sprite.collide_mask
+            collide = pygame.sprite.spritecollideany(game.jogador, collisions, callback)
+            if collide:
+                game.impulsionadores.pop(game.impulsionadores.index(self))
+                game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'boost.wav'), game)
+                pygame.time.wait(1500)
+                game.ehInvencivel = True

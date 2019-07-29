@@ -4,7 +4,9 @@ import os
 
 class Tela:
     def __init__(self):
-        self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', 'cenario_1.png'))
+        self.imagemDeFundo = pygame.image.load(os.path.join('Imagens', 'cenario_1_extendido.png'))
+        self.imagemDeFundoX = 0
+        self.imagemDeFundoX2 = self.imagemDeFundo.get_width()
 
     # metodo para lidar com interacoes com o botao de audio
     # pode ser utilizado em qualquer tela
@@ -26,8 +28,9 @@ class Tela:
 
     # desenha os elementos comuns a toda a tela, isto eh, o background e o botao de audio
     def desenharTelaBasica(self, game):
-        # carrega o background da tela
-        game.janela.blit(self.imagemDeFundo, (0, 0))
+
+        game.janela.blit(self.imagemDeFundo, (self.imagemDeFundoX, 0))
+        game.janela.blit(self.imagemDeFundo, (self.imagemDeFundoX2, 0))
 
         # carrega a imagem do botao de audio de acordo com o status de audio do jogo
         if game.comAudio:

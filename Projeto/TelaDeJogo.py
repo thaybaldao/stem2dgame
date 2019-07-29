@@ -19,9 +19,10 @@ class TelaDeJogo(Tela):
         self.fonte1 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 35)
         self.fonte2 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 160)
         self.batalha = False
+        self.time = 0
 
         # inicializando jogador e vetor para armazenar outros elementos do jogo
-        self.tolerancia = game.jogador.largura*2
+        self.tolerancia = game.jogador.largura*2.1
 
         game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'music1.wav'), game)
 
@@ -86,16 +87,16 @@ class TelaDeJogo(Tela):
             elif r < 22 and not game.ehInvencivel and game.score > 30 and game.score % 5 == 0 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
                  game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA, 150 + 5*r, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
         elif len(game.inimigos) == 0 and self.tempoDeBatalha > 0:
-            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, 5*game.dvel))
+            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, int(game.score/25), '1'))
 
 
     def checarComportamentoJogador(self, game, evento):
         # verificar se o usuario pediu para o jogador fazer algum comando (atirar ou pular)
         if evento != [] and evento.type == pygame.KEYDOWN: #verificar se há algo na fila de eventos e se há teclas precionadas
             if evento.key == pygame.K_UP:
-                game.jogador.pular()
+                game.jogador.pular(game)
             elif evento.key == pygame.K_SPACE:
-                game.jogador.atirar(self.tiros)
+                game.jogador.atirar(game)
 
 
     def checarColisoes(self, game):
@@ -112,14 +113,13 @@ class TelaDeJogo(Tela):
             inimigo.checarColisoes(game)
 
         for tiro in game.tiros:
-            tiro.checarColisoes(self, game)
+            tiro.checarColisoes(game, tiro)
 
         for tiroInimigo in game.tirosInimigo:
-            tiroInimigo.checarColisoes(self, game)
-
+            tiroInimigo.checarColisoes(game, tiroInimigo)
 
     def atualizar(self, game):
-        game.jogador.atualizar()
+        game.jogador.atualizar(game)
 
         for obstaculo in game.obstaculos:
             obstaculo.atualizar(game)
@@ -145,12 +145,18 @@ class TelaDeJogo(Tela):
             tiro.atualizar(game)
             if tiro.x < - tiro.largura - 20:
                 game.tiros.pop(game.tiros.index(tiro))
-
         for tiroInimigo in game.tirosInimigo:
             tiroInimigo.atualizar(game)
             if tiroInimigo.x < - tiroInimigo.largura - 20:
-                game.tirosInimigos.pop(game.tirosInimigos.index(tiroInimigo))
+                game.tirosInimigo.pop(game.tirosInimigo.index(tiroInimigo))
 
+        # making background move
+        self.imagemDeFundoX -= 2
+        self.imagemDeFundoX2 -= 2
+        if self.imagemDeFundoX < self.imagemDeFundo.get_width() * -1:
+            self.imagemDeFundoX = self.imagemDeFundo.get_width()
+        if self.imagemDeFundoX2 < self.imagemDeFundo.get_width() * -1:
+            self.imagemDeFundoX2 = self.imagemDeFundo.get_width()
 
     def interpretarEventos(self, game):
         game.clock.tick(game.fps)
@@ -189,7 +195,7 @@ class TelaDeJogo(Tela):
         for tiroInimigo in game.tirosInimigo:
             tiroInimigo.desenhar(game)
 
-        game.jogador.desenhar(game)
+        game.jogador.desenhar(game, self)
 
         self.imprimirScore(game)
 
@@ -271,26 +277,26 @@ class TelaDeJogo(Tela):
         elif game.ultimaTela == 'Tela de Perguntas':
             game.retirarPergunta()
 
-        time = 1
+        self.time = 1
 
         while game.telaAtual == self.name and not game.usuarioSaiu:
 
             # aumentar a velocidade do jogo
-            if game.aparecimentoElementos > 25 and time % 300 == 0:
+            if game.aparecimentoElementos > 25 and self.time % 300 == 0:
                 game.aparecimentoElementos -= 1
-            if time % 1200 == 0:
+            if self.time % 1200 == 0:
                 game.dvel += 1
 
             # iniciar batalhas
-            if not self.batalha and time % 1200 == 0:
+            if not self.batalha and self.time % 1800 == 0:
                 self.telaBatalha(game)
 
 
-            if time % 30 == 0:
+            if self.time % 30 == 0:
                 self.computarScore(game)
                 self.criarCenario(game)
 
-            if time % 60 == 0:
+            if self.time % 60 == 0:
                 self.computarTempoDeInvencibilidade(game)
                 self.computarTempoDeBatalha(game)
 
@@ -299,7 +305,7 @@ class TelaDeJogo(Tela):
             self.atualizar(game)
             self.desenhar(game)
 
-            time += 1
+            self.time += 1
 
 
 

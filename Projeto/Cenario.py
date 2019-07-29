@@ -7,7 +7,7 @@ class Cenario:
     def __init__(self, x, y, imagem, vel):
         self.x = x
         self.y = y
-        self.imagem = imagem
+        self.image = imagem
         self.largura = imagem.get_width()
         self.altura = imagem.get_height()
         self.rect = pygame.Rect(self.x, self.y, self.largura, self.altura) # retangulo de colisoes
@@ -24,5 +24,5 @@ class Cenario:
 
     # desenha o item do cenario na tela
     def desenhar(self, game):
-        game.janela.blit(self.imagem, (self.x, self.y))
-        pygame.draw.rect(game.janela, (255, 0, 0), self.rect, 2)
+        game.janela.blit(self.image, (self.x, self.y))
+        # pygame.draw.rect(game.janela, (255, 0, 0), self.rect, 2)
