@@ -14,6 +14,5 @@ class Vida(Cenario):
         # fazer a vida desaparecer depois da colisao
         if self.rect.colliderect(game.jogador):
             game.vidas.pop()
-            game.vidasExtras = game.vidasExtras + 1
             game.ultimaTela = 'Tela de Jogo'
             game.telaAtual = 'Tela de Perguntas'

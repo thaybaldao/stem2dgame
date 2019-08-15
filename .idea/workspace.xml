@@ -3,24 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="b5f87016-7380-4c2c-8908-9c5b9f608a5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Cenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Cenario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Configuracoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Configuracoes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/cenario_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/cenario_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/cenario_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/cenario_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/inimigo_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/inimigo_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/tiro.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/tiro.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Imagens/vida.png" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Imagens/vida.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Impulsionador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Impulsionador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Inimigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Inimigo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Jogador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Jogador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Obstaculo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Obstaculo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Tela.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tela.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeFim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeFim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Tiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tiro.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/Vida.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Vida.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/main.py" afterDir="false" />
@@ -41,47 +36,13 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>OBSTACLE</find>
-      <find>timeRunn</find>
-      <find>collisions</find>
-      <find>Channel</find>
-      <find>MIXER</find>
-      <find>mixer</find>
-      <find>300</find>
-      <find>soundMan</find>
-      <find>start</find>
-      <find>vel</find>
-      <find>vec</find>
-      <find>04B_30__.TTF</find>
-      <find>tipoJo</find>
-      <find>tipoJoga</find>
-      <find>tipo</find>
-      <find>comandoDoUsuario</find>
-      <find>inst</find>
-      <find>game.vidasEx</find>
-      <find>vidasExtra</find>
-      <find>ehInvencivel</find>
-      <find>print('pos 0: ', pos[0], ' pos1: ', pos[1] )</find>
-      <find>print(&quot;po</find>
-      <find>self.x</find>
-      <find>telaAtual = &quot;</find>
-      <find>bestScore</find>
-      <find>print</find>
-      <find>administradorDeAudio</find>
-      <find>comandoDoU</find>
-      <find>clock</find>
-      <find>fps</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OgQPzNV9xJ8WUPLIlcfYw6lWI2" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mulheresemstem2d" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>

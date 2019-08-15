@@ -29,7 +29,7 @@ class AdministradorDoJogo:
         self.tela = 0
         self.usuarioSaiu = False
         self.comAudio = True
-        self.bestScore = 0
+        self.melhorPontuacao = 0
 
         self.administradorDeAudio = AdministradorDeAudio()
 
@@ -51,7 +51,6 @@ class AdministradorDoJogo:
         self.inserirPerguntas()
 
         self.novoJogo()
-
 
     # metodo para declarar todas as perguntas do jogo
     def inserirPerguntas(self):
@@ -98,8 +97,9 @@ class AdministradorDoJogo:
         if len(self.perguntas) == 0:
             self.inserirPerguntas()
 
+    # esse metodo inicializa as constantes do jogo a cada novo jogo
     def novoJogo(self):
-        self.score = 0
+        self.pontuacao = 0
         self.aparecimentoElementos = 50
         self.vidasExtras = 3
         self.ehInvencivel = False
@@ -115,8 +115,8 @@ class AdministradorDoJogo:
         self.tiros.clear()
         self.tirosInimigo.clear()
 
+    # metodo que executa o jogo, alternando entre as telas do jogo, de acordo com os comandos do usuario
     def run(self):
-
         while not self.usuarioSaiu:
             if self.telaAtual == 'Tela de Inicio':
                 self.tela = TelaDeInicio(self)

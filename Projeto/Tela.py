@@ -8,25 +8,21 @@ class Tela:
         self.imagemDeFundoX = 0
         self.imagemDeFundoX2 = self.imagemDeFundo.get_width()
 
-    # metodo para lidar com interacoes com o botao de audio
-    # pode ser utilizado em qualquer tela
+    # metodo para lidar com interacoes com o botao de audio, pode ser utilizado em qualquer tela
     def comportamentoBotaoDeAudio(self, game, evento, pos):
         # print("pos0: ", pos[0], " pos1: ", pos[1])
         if evento.type == pygame.MOUSEBUTTONDOWN and pos[0] > 1200 and pos[0] < 1230 and pos[1] > 20 and pos[1] < 45 or pygame.key.get_pressed()[pygame.K_m]:
             if game.comAudio:
-                game.administradorDeAudio.muteSound(game)
+                game.administradorDeAudio.deixarSomMudo(game)
             else:
-                game.administradorDeAudio.unmuteSound(game)
+                game.administradorDeAudio.deixarSomTocar(game)
 
-
-    # metodo para lidar com interacoes com o botao de sair
-    # pode ser utilizado em qualquer tela
+    # metodo para lidar com interacoes com o botao de sair, pode ser utilizado em qualquer tela
     def comportamentoBotaoDeSair(self, game, evento):
         if evento.type == pygame.QUIT or pygame.key.get_pressed()[pygame.K_ESCAPE]:
             game.usuarioSaiu = True
 
-
-    # desenha os elementos comuns a toda a tela, isto eh, o background e o botao de audio
+    # desenha os elementos comuns a toda a tela, isto eh, a tela de fundo e o botao de audio
     def desenharTelaBasica(self, game):
 
         game.janela.blit(self.imagemDeFundo, (self.imagemDeFundoX, 0))

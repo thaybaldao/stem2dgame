@@ -27,14 +27,14 @@ class TelaDeJogo(Tela):
         game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'music1.wav'), game)
 
 
-    def computarScore(self, game):
-        game.score += 1
+    def computarPontuacao(self, game):
+        game.pontuacao += 1
 
-    def imprimirScore(self, game):
-        self.score = self.fonte1.render("SCORE: ", True, ROXO)
-        self.scoreNum = self.fonte1.render(str(game.score), True, ROXO)
-        game.janela.blit(self.score, (35, ALTURA_DA_TELA - 50))
-        game.janela.blit(self.scoreNum, (140, ALTURA_DA_TELA - 50))
+    def imprimirPontuacao(self, game):
+        self.pontuacao = self.fonte1.render("SCORE: ", True, ROXO)
+        self.pontuacaoNum = self.fonte1.render(str(game.pontuacao), True, ROXO)
+        game.janela.blit(self.pontuacao, (35, ALTURA_DA_TELA - 50))
+        game.janela.blit(self.pontuacaoNum, (140, ALTURA_DA_TELA - 50))
 
     # imprime barra de vidas
     def imprimirBarraDeVidas(self, game):
@@ -70,7 +70,7 @@ class TelaDeJogo(Tela):
 
                  elif game.obstaculos[-1].x + game.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
                      game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 562 + 8*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_1.png')), 5 + game.dvel))
-                     if r == 7 and game.vidasExtras < 3 and game.score > 30 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
+                     if r == 7 and game.vidasExtras < 3 and game.pontuacao > 30 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
                          game.vidas.append(Vida(LARGURA_DA_TELA + game.obstaculos[-1].largura + 50, 620, pygame.image.load(os.path.join('Imagens', 'vida.png')), 5 + game.dvel))
             elif r < 16:
                  if len(game.obstaculos) == 0:
@@ -78,16 +78,16 @@ class TelaDeJogo(Tela):
 
                  elif game.obstaculos[-1].x + game.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
                      game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 585 - 5*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_2.png')), 5 + game.dvel))
-                     if r == 15 and not game.ehInvencivel and game.score > 30 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
+                     if r == 15 and not game.ehInvencivel and game.pontuacao > 30 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
                          game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA + game.obstaculos[-1].largura + 50, 580, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
 
-            elif r < 18 and game.vidasExtras < 3 and game.score > 30 and game.score%5 == 0 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
+            elif r < 18 and game.vidasExtras < 3 and game.pontuacao > 30 and game.pontuacao%5 == 0 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
                 game.vidas.append(Vida(LARGURA_DA_TELA, 200 + 5*r, pygame.image.load(os.path.join('Imagens', 'vida.png')), 5 + game.dvel))
 
-            elif r < 22 and not game.ehInvencivel and game.score > 30 and game.score % 5 == 0 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
+            elif r < 22 and not game.ehInvencivel and game.pontuacao > 30 and game.pontuacao % 5 == 0 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
                  game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA, 150 + 5*r, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
         elif len(game.inimigos) == 0 and self.tempoDeBatalha > 0:
-            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, int(game.score/25), '1'))
+                game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, int(game.pontuacao/25), '1'))
 
 
     def checarComportamentoJogador(self, game, evento):
@@ -197,7 +197,7 @@ class TelaDeJogo(Tela):
 
         game.jogador.desenhar(game, self)
 
-        self.imprimirScore(game)
+        self.imprimirPontuacao(game)
 
         self.imprimirTempoDeInvencibilidade(game)
 
@@ -293,7 +293,7 @@ class TelaDeJogo(Tela):
 
 
             if self.time % 30 == 0:
-                self.computarScore(game)
+                self.computarPontuacao(game)
                 self.criarCenario(game)
 
             if self.time % 60 == 0:

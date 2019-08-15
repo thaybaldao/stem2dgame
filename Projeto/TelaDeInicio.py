@@ -16,8 +16,6 @@ class TelaDeInicio(Tela):
 
        game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'menuLoop.wav'), game)
 
-
-
    # metodo para lidar com interacoes com o botao que direciona para a tela de instrucoes
    def comportamentoBotaoDeInstrucoes(self, game, evento, pos):
        if pos[0] > 445 and pos[0] < 805 and pos[1] > 540 and pos[1] < 600:
@@ -28,7 +26,6 @@ class TelaDeInicio(Tela):
                game.telaAtual = 'Tela de Instrucoes'
        else:
            self.inst = self.fonte2.render('INSTRUCOES', True, AZULBB)
-
 
    # metodo para lidar com interacoes com o botao de jogar
    def comportamentoBotaoDeJogar(self, game, evento, pos):
@@ -41,7 +38,6 @@ class TelaDeInicio(Tela):
                game.telaAtual = 'Tela de Jogo'
        else:
            self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
-
 
    def interpretarEventos(self, game):
        game.clock.tick(game.fps)
@@ -63,20 +59,17 @@ class TelaDeInicio(Tela):
 
            # print("pos0: ", pos[0], " pos1: ", pos[1])
 
-
-   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+   # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):
        game.janela.blit(self.title, (315, 200))
        game.janela.blit(self.botaoPlay, (600, 365))
        game.janela.blit(self.inst, (445, 540))
        game.janela.blit(self.jogador, (X_CHAO, 350))
 
-
    def desenhar(self, game):
        self.desenharTelaBasica(game)
        self.desenharTela(game)
        pygame.display.flip()
-
 
    def run(self, game):
        while game.telaAtual == self.name and not game.usuarioSaiu:

@@ -13,18 +13,20 @@ class Inimigo(Cenario):
         self.velY = -2.5 *vel
         self.tipo = tipo
 
+    # metodo responsavel pela movimentacao do inimigo na tela
     def atualizar(self, game):
         self.atualizacaoBasica()
         r = random.randrange(0, 75)
         if not r:
             game.tirosInimigo.append(Tiro(self.x-30, self.y, 'I', 10 + game.dvel))
+
         # Equações de Movimento
         dt = 1
 
         if self.tipo == '1':
             acc = 0.014*self.vel*self.vel
 
-            # Atualizar velocidade e posição do jogador
+            # Atualizar velocidade e posição do inimigo
             self.velY += acc*dt
             self.y += self.velY*dt
             self.rect.top = self.y
@@ -32,7 +34,7 @@ class Inimigo(Cenario):
                 self.y = (Y_CHAO) - self.altura
                 self.velY = -2.5 * self.vel
         elif self.tipo == '3':
-            # Atualizar velocidade e posição do jogador
+            # Atualizar velocidade e posição do inimigo
             if self.y < 380:
                 self.velY = -self.vel
             elif self.y > Y_CHAO - self.altura:
@@ -46,10 +48,10 @@ class Inimigo(Cenario):
         # lembrar que se o personagem tiver vidas e se chocar contra inimigos, ele nao deve morrer mas sim perder uma vida
         # lembrar que se a booleana game.ehInvencivel for verdadeira as colisoes com inimigos devem ser ignoradas
         if self.rect.colliderect(game.jogador):
-            collisions = pygame.sprite.spritecollide(game.jogador, game.inimigos, False)
+            colisoes = pygame.sprite.spritecollide(game.jogador, game.inimigos, False)
             callback = pygame.sprite.collide_mask
-            collide = pygame.sprite.spritecollideany(game.jogador, collisions, callback)
-            if collide:
+            colisao = pygame.sprite.spritecollideany(game.jogador, colisoes, callback)
+            if colisao:
                 if game.ehInvencivel:
                     game.inimigos.pop(game.inimigos.index(self))
                 else:

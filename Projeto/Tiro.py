@@ -9,8 +9,7 @@ class Tiro(Cenario):
         self.carregarImagemTiro(tipo)
         super().__init__(x, y, self.imagem, vel)
 
-
-    #carregar a imagem do tiro
+    # carregar a imagem do tiro
     def carregarImagemTiro(self, tipo):
         self.imagem = pygame.image.load(os.path.join('Imagens', 'tiro.png'))
 
@@ -20,27 +19,18 @@ class Tiro(Cenario):
 
     # atualiza a posicao do tiro apos disparado
     def atualizar(self, tela):
-        # Atualizar velocidade e posição do tiro
         self.atualizacaoBasica()
-        #dt = 1
-        #self.x += self.vel*dt
-        #if self.x == LARGURA_DA_TELA-self.largura/2:
-        #    tela.tiros.pop()
-        #if self.x == 0-self.largura/2:
-        #    tela.tirosInimigo.pop()
 
-
-    # # verifica as colisoes do tiro com o inimigo
+    # verifica as colisoes do tiro com o inimigo
     def checarColisoes(self, game, tiro):
         # lembrar que se o personagem tiver vidas e se chocar contra os obstaculos, ele nao deve morrer mas sim perder uma vida
         # lembrar que se a booleana telaDeJogo.jogador.ehInvencivel for verdadeira as colisoes com obstaculos devem ser ignoradas
         for inimigo in game.inimigos:
             if self.vel < 0 and self.rect.colliderect(inimigo):
-                collisions = pygame.sprite.spritecollide(inimigo, game.tiros, False)
+                colisoes = pygame.sprite.spritecollide(inimigo, game.tiros, False)
                 callback = pygame.sprite.collide_mask
-                collide = pygame.sprite.spritecollideany(inimigo, collisions, callback)
-                # print(inimigo.vida)
-                if collide:
+                colisao = pygame.sprite.spritecollideany(inimigo, colisoes, callback)
+                if collisao:
                     inimigo.vida = inimigo.vida - 1
                     game.tiros.pop(game.tiros.index(self))
                     if inimigo.vida < 1:
@@ -54,9 +44,9 @@ class Tiro(Cenario):
                         game.tirosInimigo.pop(game.tirosInimigo.index(tiroInimigo))
 
         if self.vel > 0 and self.rect.colliderect(game.jogador):
-            collisions = pygame.sprite.spritecollide(game.jogador, game.tirosInimigo, False)
+            colisoes = pygame.sprite.spritecollide(game.jogador, game.tirosInimigo, False)
             callback = pygame.sprite.collide_mask
-            collide = pygame.sprite.spritecollideany(game.jogador, collisions, callback)
+            colisao = pygame.sprite.spritecollideany(game.jogador, colisoes, callback)
             if collide:
                 if game.ehInvencivel:
                     game.tirosInimigo.pop(game.tirosInimigo.index(self))

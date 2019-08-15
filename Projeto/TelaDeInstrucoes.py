@@ -3,7 +3,6 @@ from Tela import *
 import pygame
 import os
 
-
 class TelaDeInstrucoes(Tela):
    def __init__(self):
        super().__init__()
@@ -14,7 +13,6 @@ class TelaDeInstrucoes(Tela):
        self.voltar = self.fonte2.render('VOLTAR', True, AZULBB)
        self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
        self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
-
 
    # metodo para lidar com interacoes com o botao de jogar
    def comportamentoBotaoDeJogar(self, game, evento, pos):
@@ -28,7 +26,6 @@ class TelaDeInstrucoes(Tela):
         else:
             self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
 
-
    # metodo para lidar com interacoes com o botao que redireciona para a tela de inicio
    def comportamentoBotaoVoltarTelaInicio(self, game, evento, pos):
         if pos[0] > 50 and pos[0] < 150 and pos[1] > 30 and pos[1] < 55:
@@ -37,10 +34,8 @@ class TelaDeInstrucoes(Tela):
             else:
                 game.ultimaTela = 'Tela de Instrucoes'
                 game.telaAtual = 'Tela de Inicio'
-
         else:
             self.voltar = self.fonte2.render('VOLTAR', True, AZULBB)
-
 
    def interpretarEventos(self, game):
        game.clock.tick(game.fps)
@@ -62,14 +57,11 @@ class TelaDeInstrucoes(Tela):
 
            # print("pos0: ", pos[0], " pos1: ", pos[1])
 
-
    def imprimirInstrucoes(self, game, num, text):
         ins = self.fonte2.render(text, True, AZULBB)
         game.janela.blit(ins, (70, 170 + 100*num))
 
-
-
-   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+   # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):
        game.janela.blit(self.title, (500, 60))
        game.janela.blit(self.voltar, (50, 30))

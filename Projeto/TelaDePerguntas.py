@@ -138,7 +138,7 @@ class TelaDePerguntas(Tela):
             self.comportamentoBotaoPular(game, evento, pos)
 
 
-    # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+    # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
     def desenharTela(self, game):
         game.janela.blit(self.pergunta, (100, 90))
 

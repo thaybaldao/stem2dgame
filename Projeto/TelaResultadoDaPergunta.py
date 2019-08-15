@@ -50,16 +50,16 @@ class TelaResultadoDaPergunta(Tela):
 
 
 
-   # esse metodo deve desenhar tudo que tem na tela, exceto background e botao de audio
+   # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):
        game.janela.blit(self.continuar, (940, 650))
 
-       # Se a resposta for a correta, desenhar o aviso de parabéns
+       # se a resposta for a correta, desenhar o aviso de parabéns
        if game.respostaCorreta == game.respostaUsuario:
            game.janela.blit(self.respCorreta, (210, 200))
            game.janela.blit(self.mensCorreta, (230, 430))
 
-       #caso contrário, desenhar o aviso de :(
+       # caso contrário, desenhar o aviso de game over
        else:
            game.janela.blit(self.respIncorreta, (200, 200))
            game.janela.blit(self.mensIncorreta, (380, 430))
