@@ -54,48 +54,10 @@ class AdministradorDoJogo:
 
     # metodo para declarar todas as perguntas do jogo
     def inserirPerguntas(self):
-        # pergunta 1
-        self.perguntas.append("Quem foi Ada Lovelace?")
-        self.alternativaA.append("Engenheira")
-        self.alternativaB.append("Primeira programadora do mundo")
-        self.alternativaC.append("Matematica")
-        self.alternativaD.append("Descobridora do DNA")
-        self.respostas.append('B')
-
-        # pergunta 2
-        self.perguntas.append("Quem foi Marie Curie?")
-        self.alternativaA.append("Engenheira da NASA")
-        self.alternativaB.append("Primeira matematica do mundo")
-        self.alternativaC.append("Descobridora do Radio")
-        self.alternativaD.append("Fundadora do ITA")
-        self.respostas.append('C')
-
-        # pergunta 3
-        self.perguntas.append("Qual a maior contribuicao cientifica de Rosalind Franklin?")
-        self.alternativaA.append("Descobriu o Radio")
-        self.alternativaB.append("Descoberta do DNA")
-        self.alternativaC.append("Engenheira chefe da NASA")
-        self.alternativaD.append("Inventou o numero pi")
-        self.respostas.append('B')
-
-        # pergunta 4
-        self.perguntas.append("Qual o maior feito de Margareth Hamilton?")
-        self.alternativaA.append("Descobridora do Radio")
-        self.alternativaB.append("Descoberta do DNA")
-        self.alternativaC.append("Liderou o projeto Apollo 11")
-        self.alternativaD.append("Inventou o numero pi")
-        self.respostas.append('C')
+        pass
 
     def retirarPergunta(self):
-        self.perguntas.pop(self.i)
-        self.alternativaA.pop(self.i)
-        self.alternativaB.pop(self.i)
-        self.alternativaC.pop(self.i)
-        self.alternativaD.pop(self.i)
-        self.respostas.pop(self.i)
-
-        if len(self.perguntas) == 0:
-            self.inserirPerguntas()
+        pass
 
     # esse metodo inicializa as constantes do jogo a cada novo jogo
     def novoJogo(self):

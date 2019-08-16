@@ -10,12 +10,7 @@ class Tela:
 
     # metodo para lidar com interacoes com o botao de audio, pode ser utilizado em qualquer tela
     def comportamentoBotaoDeAudio(self, game, evento, pos):
-        # print("pos0: ", pos[0], " pos1: ", pos[1])
-        if evento.type == pygame.MOUSEBUTTONDOWN and pos[0] > 1200 and pos[0] < 1230 and pos[1] > 20 and pos[1] < 45 or pygame.key.get_pressed()[pygame.K_m]:
-            if game.comAudio:
-                game.administradorDeAudio.deixarSomMudo(game)
-            else:
-                game.administradorDeAudio.deixarSomTocar(game)
+        pass
 
     # metodo para lidar com interacoes com o botao de sair, pode ser utilizado em qualquer tela
     def comportamentoBotaoDeSair(self, game, evento):

@@ -11,27 +11,18 @@ class AdministradorDeAudio():
     def tocarMusicaDeFundo(self, musica, game):
         # lembrar de checar se o jogo esta com audio ou nao
         # usar 1 canal para a musica de fundo e outro para os efeitos sonoros
-        if (game.comAudio):
-            pygame.mixer.Channel(0).play(pygame.mixer.Sound(musica), -1)
-            pygame.mixer.Channel(0).set_volume(1)
+        pass
 
     def tocarEfeitoSonoro(self, efeito, game):
         # lembrar de checar se o jogo esta com audio ou nao
         # usar 1 canal para a musica de fundo e outro para os efeitos sonoros
-        if (game.comAudio):
-            pygame.mixer.Channel(0).set_volume(0.3)
-            pygame.mixer.Channel(1).play(pygame.mixer.Sound(efeito), 0)
-            pygame.mixer.Channel(0).set_volume(1)
+        pass
 
     # deixar o som mudo
     def deixarSomMudo(self, game):
-        pygame.mixer.Channel(0).set_volume(0)
-        pygame.mixer.Channel(1).set_volume(0)
-        game.comAudio = False
+        pass
 
     # deixar o som tocando
     def deixarSomTocar(self, game):
-        pygame.mixer.Channel(0).set_volume(1)
-        pygame.mixer.Channel(1).set_volume(1)
-        game.comAudio = True
+        pass
 

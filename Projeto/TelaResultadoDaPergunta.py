@@ -20,18 +20,7 @@ class TelaResultadoDaPergunta(Tela):
 
 
    def comportamentoBotaoContinuar(self, game, evento, pos):
-       if pos[0] > 940 and pos[0] < 1180 and pos[1] > 650 and pos[1] < 690:
-           if evento.type != pygame.MOUSEBUTTONDOWN:
-               self.continuar = self.fonte3.render('CONTINUAR', True, AMARELO)
-           else:
-                if game.respostaCorreta == game.respostaUsuario:
-                    game.ultimaTela = 'Tela Resultado da Pergunta'
-                    game.telaAtual = 'Tela de Jogo'
-                else:
-                    game.ultimaTela = 'Tela Resultado da Pergunta'
-                    game.telaAtual = 'Tela de Fim'
-       else:
-           self.continuar = self.fonte3.render('CONTINUAR', True, AZULBB)
+       pass
 
 
    def interpretarEventos(self, game):

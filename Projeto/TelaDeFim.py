@@ -22,27 +22,9 @@ class TelaDeFim(Tela):
        if game.pontuacao > game.melhorPontuacao:
            game.melhorPontuacao = game.pontuacao
 
-       # limpa os vetores que armazenam os objetos para viabilizar novos jogos
-       game.obstaculos.clear()
-       game.inimigos.clear()
-       game.vidas.clear()
-       game.impulsionadores.clear()
-       game.tiros.clear()
-       game.tirosInimigo.clear()
-
-       game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'menuLoop.wav'), game)
-
    # metodo para lidar com interacoes com o botao de replay
    def comportamentoBotaoDeReplay(self, game, evento, pos):
-       if pos[0] > 610 and pos[0] < 675 and pos[1] > 285 and pos[1] < 350:
-           if evento.type != pygame.MOUSEBUTTONDOWN:
-               self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'replay_brilho_2.png'))
-           else:
-               game.novoJogo()
-               game.ultimaTela = 'Tela de Fim'
-               game.telaAtual = 'Tela de Jogo'
-       else:
-           self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'replay_2.png'))
+       pass
 
 
    def interpretarEventos(self, game):
@@ -62,12 +44,10 @@ class TelaDeFim(Tela):
 
 
    def imprimirPontuacao(self, game):
-       self.pontuacaoFinalNum = self.fonte1.render(str(self.pontuacaoNum), True, AMARELO)
-       game.janela.blit(self.pontuacaoFinalNum, (790, 445))
+       pass
 
    def imprimirMaiorPontuacao(self, game):
-       self.melhorPontuacaoNum = self.fonte1.render(str(game.melhorPontuacao), True, AMARELO)
-       game.janela.blit(self.melhorPontuacaoNum, (815, 565))
+       pass
 
    # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):

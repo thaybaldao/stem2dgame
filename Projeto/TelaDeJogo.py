@@ -24,70 +24,27 @@ class TelaDeJogo(Tela):
         # inicializando jogador e vetor para armazenar outros elementos do jogo
         self.tolerancia = game.jogador.largura*2.1
 
-        game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'music1.wav'), game)
-
 
     def computarPontuacao(self, game):
-        game.pontuacao += 1
+        pass
 
     def imprimirPontuacao(self, game):
-        self.pontuacao = self.fonte1.render("SCORE: ", True, ROXO)
-        self.pontuacaoNum = self.fonte1.render(str(game.pontuacao), True, ROXO)
-        game.janela.blit(self.pontuacao, (35, ALTURA_DA_TELA - 50))
-        game.janela.blit(self.pontuacaoNum, (140, ALTURA_DA_TELA - 50))
+        pass
 
     # imprime barra de vidas
     def imprimirBarraDeVidas(self, game):
-        if game.vidasExtras > 0:
-            for i in range(game.vidasExtras):
-                game.janela.blit(pygame.image.load(os.path.join('Imagens', 'vida.png')), (70*i + 20, 20))
-
+        pass
     def computarTempoDeInvencibilidade(self, game):
-        if game.ehInvencivel:
-            if game.tempoDeInvencibilidade > 0:
-                game.tempoDeInvencibilidade -=1
-            else:
-                game.ehInvencivel = False
-                game.tempoDeInvencibilidade = 15
-
+        pass
 
     # imprime tempo de invencibilidade na Tela a partir do momento em que a varivel game.ehInvencivel se tornar verdadeira, por x segundos
     def imprimirTempoDeInvencibilidade(self, game):
-        if game.ehInvencivel:
-            self.invencibilidade = self.fonte1.render("INVENCIBILIDADE: ", True, AZULBB)
-            self.invencibilidadeNum = self.fonte1.render(str(game.tempoDeInvencibilidade), True, AZULBB)
-            game.janela.blit(self.invencibilidade, (LARGURA_DA_TELA - 335, ALTURA_DA_TELA - 50))
-            game.janela.blit(self.invencibilidadeNum, (LARGURA_DA_TELA - 80, ALTURA_DA_TELA - 50))
+        pass
 
 
     # cria itens do cenario na tela
     def criarCenario(self, game):
-        if not self.batalha:
-            r = random.randrange(0, game.aparecimentoElementos)
-            if r < 8:
-                 if len(game.obstaculos) == 0:
-                     game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 562 + 8*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_1.png')), 10 + game.dvel))
-
-                 elif game.obstaculos[-1].x + game.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
-                     game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 562 + 8*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_1.png')), 5 + game.dvel))
-                     if r == 7 and game.vidasExtras < 3 and game.pontuacao > 30 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
-                         game.vidas.append(Vida(LARGURA_DA_TELA + game.obstaculos[-1].largura + 50, 620, pygame.image.load(os.path.join('Imagens', 'vida.png')), 5 + game.dvel))
-            elif r < 16:
-                 if len(game.obstaculos) == 0:
-                     game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 585 - 5*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_2.png')), 10 + game.dvel))
-
-                 elif game.obstaculos[-1].x + game.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
-                     game.obstaculos.append(Obstaculo(LARGURA_DA_TELA, 585 - 5*(r%4), pygame.image.load(os.path.join('Imagens', 'obstaculo_1_2.png')), 5 + game.dvel))
-                     if r == 15 and not game.ehInvencivel and game.pontuacao > 30 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
-                         game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA + game.obstaculos[-1].largura + 50, 580, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
-
-            elif r < 18 and game.vidasExtras < 3 and game.pontuacao > 30 and game.pontuacao%5 == 0 and len(game.vidas) == 0 and len(game.impulsionadores) == 0:
-                game.vidas.append(Vida(LARGURA_DA_TELA, 200 + 5*r, pygame.image.load(os.path.join('Imagens', 'vida.png')), 5 + game.dvel))
-
-            elif r < 22 and not game.ehInvencivel and game.pontuacao > 30 and game.pontuacao % 5 == 0 and len(game.impulsionadores) == 0 and len(game.vidas) == 0:
-                 game.impulsionadores.append(Impulsionador(LARGURA_DA_TELA, 150 + 5*r, pygame.image.load(os.path.join('Imagens', 'impulsionador_1.png')), 5 + game.dvel))
-        elif len(game.inimigos) == 0 and self.tempoDeBatalha > 0:
-                game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, int(game.pontuacao/25), '1'))
+        pass
 
 
     def checarComportamentoJogador(self, game, evento):
@@ -150,14 +107,6 @@ class TelaDeJogo(Tela):
             if tiroInimigo.x < - tiroInimigo.largura - 20:
                 game.tirosInimigo.pop(game.tirosInimigo.index(tiroInimigo))
 
-        # making background move
-        self.imagemDeFundoX -= 2
-        self.imagemDeFundoX2 -= 2
-        if self.imagemDeFundoX < self.imagemDeFundo.get_width() * -1:
-            self.imagemDeFundoX = self.imagemDeFundo.get_width()
-        if self.imagemDeFundoX2 < self.imagemDeFundo.get_width() * -1:
-            self.imagemDeFundoX2 = self.imagemDeFundo.get_width()
-
     def interpretarEventos(self, game):
         game.clock.tick(game.fps)
 
@@ -206,76 +155,15 @@ class TelaDeJogo(Tela):
         pygame.display.flip()
 
     def telaBatalha(self, game):
-        # limpar cenario
-        game.obstaculos.clear()
-        game.inimigos.clear()
-        game.vidas.clear()
-        game.impulsionadores.clear()
-        game.tiros.clear()
-        game.tirosInimigo.clear()
-        self.desenhar(game)
-
-        # trocar musica
-        game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'music2.wav'), game)
-
-        # escrever mensagem para comecar a batalha
-        self.batalhaTexto = self.fonte2.render("BATALHA!", True, ROXO)
-        game.janela.blit(self.batalhaTexto, (320, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
-        self.batalhaTexto = self.fonte2.render("BATALHA!", True, AMARELO)
-        game.janela.blit(self.batalhaTexto, (320, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
-        self.batalhaTexto = self.fonte2.render("BATALHA!", True, ROXO)
-        game.janela.blit(self.batalhaTexto, (320, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
-
-        # inicializar constantes da batalha
-        self.batalha = True
-        self.tempoDeBatalha = 10 + random.randrange(0, 5)
+        pass
 
     def telaBomTrabalho(self, game):
-        # limpar cenario
-        game.inimigos.clear()
-        game.tiros.clear()
-        game.tirosInimigo.clear()
-        self.desenhar(game)
-
-        # trocar musica
-        game.administradorDeAudio.tocarMusicaDeFundo(os.path.join('Musica', 'music1.wav'), game)
-
-        # escrever mensagem de bom trabalho
-        self.batalhaTexto = self.fonte2.render("BOM TRABALHO!", True, ROXO)
-        game.janela.blit(self.batalhaTexto, (120, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
-        self.batalhaTexto = self.fonte2.render("BOM TRABALHO!", True, AMARELO)
-        game.janela.blit(self.batalhaTexto, (120, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
-        self.batalhaTexto = self.fonte2.render("BOM TRABALHO!", True, ROXO)
-        game.janela.blit(self.batalhaTexto, (120, 330))
-        pygame.display.flip()
-        pygame.time.wait(600)
+        pass
 
     def computarTempoDeBatalha(self, game):
-        if self.batalha:
-            if self.tempoDeBatalha > 0:
-                self.tempoDeBatalha -=1
-            elif len(game.inimigos) == 0:
-                self.batalha = False
-                self.telaBomTrabalho(game)
+        pass
 
     def run(self, game):
-
-        if game.ultimaTela == 'Tela Resultado da Pergunta':
-            game.retirarPergunta()
-            game.administradorDeAudio.tocarEfeitoSonoro(os.path.join('Musica', 'life.wav'), game)
-            pygame.time.wait(1500)
-        elif game.ultimaTela == 'Tela de Perguntas':
-            game.retirarPergunta()
 
         self.time = 1
 

@@ -12,7 +12,4 @@ class Vida(Cenario):
     def checarColisoes(self, game):
         # incrementar a variavel inteira game.vidasExtras caso ocorra a colisao do personagem com a vida
         # fazer a vida desaparecer depois da colisao
-        if self.rect.colliderect(game.jogador):
-            game.vidas.pop()
-            game.ultimaTela = 'Tela de Jogo'
-            game.telaAtual = 'Tela de Perguntas'
+        pass

@@ -48,68 +48,19 @@ class Jogador():
 
     # esse metodo atualiza as posicoes do jogador para que ele pule
     def pular(self, game):
-        if self.pos.y == Y_CHAO:
-            self.vel.y = VELOC_INICIAL_PULO
-            self.acc.y = ACE_GRAV
-            if len(game.obstaculos):
-                self.acc.y = 0.014*game.obstaculos[0].vel*game.obstaculos[0].vel
-                self.vel.y = -2.5*game.obstaculos[0].vel
-            if len(game.inimigos):
-                self.acc.y = 0.014*game.inimigos[0].vel*game.inimigos[0].vel
-                self.vel.y = -2.5*game.inimigos[0].vel
+        pass
 
     # esse metodo faz carregar o tiro do jogador na tela
     def atirar(self, game):
-        game.tiros.append(Tiro(self.x + self.largura, 0.93*self.pos.y, 'A', -10 - game.dvel))
+        pass
 
     # esse metodo atualiza as posicoes do jogador
     def atualizar(self, game):
-        # Equações de Movimento
-        dt = 1
-
-        # Atualizar velocidade e posição do jogador
-        self.vel.y += self.acc.y*dt
-        self.pos += self.vel*dt
-        self.rect.midbottom = self.pos
-
-        if self.pos.y >= (Y_CHAO):
-            self.pos.y = (Y_CHAO)
-            self.vel.y = 0
+        pass
 
     # desenha o jogador na tela com a imagem correspondente ao seu estado atual
     def desenhar(self, game, tela):
-
-        # vetor com as imagens
-        if game.ehInvencivel == False:
-            self.imagens = [self.imagemF, self.imagemD, self.imagemE]
-            if self.pular:
-                self.image = self.imagemD
-            else:
-                self.image = self.imagemE
-        if game.ehInvencivel == True:
-            self.imagens = [self.imagemInvencivelF, self.imagemInvencivelD, self.imagemInvencivelE]
-            if self.pular:
-                self.image = self.imagemInvencivelD
-            else:
-                self.image = self.imagemInvencivelE
-
-        # gerar efeito gradual no pulo
-        if self.pos.y == (Y_CHAO):
-            self.imagem = self.imagens[0]
-        elif self.pos.y < (Y_CHAO) and self.pos.y > (0.95*Y_CHAO):
-            self.imagem = self.imagens[1]
-        else:
-            self.imagem = self.imagens[2]
-        if not tela.batalha:
-            if self.pos.y == Y_CHAO and tela.time % 12 < 3:
-                self.imagem = self.imagens[0]
-            elif self.pos.y == Y_CHAO and tela.time % 12 < 6:
-                self.imagem = self.imagens[1]
-            elif self.pos.y == Y_CHAO and tela.time % 12 < 9:
-                self.imagem = self.imagens[2]
-            elif self.pos.y == Y_CHAO and tela.time % 12 < 12:
-                self.imagem = self.imagens[1]
-
+        pass
 
         game.janela.blit(self.imagem, (self.rect.left, self.rect.top))
         # pygame.draw.rect(game.janela, (255, 0, 0), self.rect, 2)
