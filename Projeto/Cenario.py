@@ -16,7 +16,7 @@ class Cenario:
     # descreve como o item do cenario tem sua posicao horizontal atualizada na tela
     def atualizacaoBasica(self):
         if self.x > -200:
-            self.x -= self.largura
+            self.x -= self.vel
         self.rect.x = self.x
         self.rect.y = self.y
 
