@@ -15,14 +15,14 @@ class TelaResultadoDaPergunta(Tela):
        self.mensCorreta = self.fonte2.render('Desfrute de uma vida extra!', True, PRETO)
        self.respIncorreta = self.fonte1.render('RESPOSTA INCORRETA...', True, AMARELO)
        self.mensIncorreta = self.fonte2.render('Tente novamente...', True, PRETO)
-       self.continuar = self.fonte3.render('CONTINUAR', True, AZULBB)
+       self.botaoContinuar = self.fonte3.render('CONTINUAR', True, AZULBB)
        self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
 
 
    def comportamentoBotaoContinuar(self, game, evento, pos):
        if pos[0] > 940 and pos[0] < 1180 and pos[1] > 650 and pos[1] < 690:
            if evento.type != pygame.MOUSEBUTTONDOWN:
-               self.continuar = self.fonte3.render('CONTINUAR', True, AMARELO)
+               self.botaoContinuar = self.fonte3.render('CONTINUAR', True, AMARELO)
            else:
                 if game.respostaCorreta == game.respostaUsuario:
                     game.ultimaTela = 'Tela Resultado da Pergunta'
@@ -31,7 +31,7 @@ class TelaResultadoDaPergunta(Tela):
                     game.ultimaTela = 'Tela Resultado da Pergunta'
                     game.telaAtual = 'Tela de Fim'
        else:
-           self.continuar = self.fonte3.render('CONTINUAR', True, AZULBB)
+           self.botaoContinuar = self.fonte3.render('CONTINUAR', True, AZULBB)
 
 
    def interpretarEventos(self, game):
@@ -52,7 +52,7 @@ class TelaResultadoDaPergunta(Tela):
 
    # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):
-       game.janela.blit(self.continuar, (940, 650))
+       game.janela.blit(self.botaoContinuar, (940, 650))
 
        # se a resposta for a correta, desenhar o aviso de parabéns
        if game.respostaCorreta == game.respostaUsuario:

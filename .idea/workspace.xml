@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b5f87016-7380-4c2c-8908-9c5b9f608a5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/AdministradorDeAudio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Cenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Cenario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Impulsionador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Impulsionador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Inimigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Inimigo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Jogador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Jogador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Obstaculo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Obstaculo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Tela.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tela.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeFim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeFim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDePerguntas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Tiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tiro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/Vida.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Vida.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

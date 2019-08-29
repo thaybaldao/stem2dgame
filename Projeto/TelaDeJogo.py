@@ -95,7 +95,7 @@ class TelaDeJogo(Tela):
         if evento != [] and evento.type == pygame.KEYDOWN: #verificar se há algo na fila de eventos e se há teclas precionadas
             if evento.key == pygame.K_UP:
                 game.jogador.pular(game)
-            elif evento.key == pygame.K_SPACE:
+            elif self.batalha and evento.key == pygame.K_SPACE:
                 game.jogador.atirar(game)
 
 

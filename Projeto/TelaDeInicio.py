@@ -7,10 +7,10 @@ class TelaDeInicio(Tela):
    def __init__(self, game):
        super().__init__()
        self.name = 'Tela de Inicio'
-       self.botaoPlay = self.play = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
+       self.botaoPlay = pygame.image.load(os.path.join('Imagens', 'play_1.png'))
        self.fonte1 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 95)
        self.fonte2 = pygame.font.Font(os.path.join('Fontes', 'TOONISH.ttf'), 70)
-       self.title = self.fonte1.render(TITULO, True, AZULBB)
+       self.titulo = self.fonte1.render(TITULO, True, AZULBB)
        self.inst = self.fonte2.render('INSTRUÇÕES', True, AZULBB)
        self.jogador = pygame.image.load(os.path.join('Imagens', 'personagem_principal_FEC_1.png'))
 
@@ -61,7 +61,7 @@ class TelaDeInicio(Tela):
 
    # esse metodo deve desenhar tudo que tem na tela, exceto tela de fundo e botao de audio
    def desenharTela(self, game):
-       game.janela.blit(self.title, (315, 200))
+       game.janela.blit(self.titulo, (315, 200))
        game.janela.blit(self.botaoPlay, (600, 365))
        game.janela.blit(self.inst, (445, 540))
        game.janela.blit(self.jogador, (X_CHAO, 350))
