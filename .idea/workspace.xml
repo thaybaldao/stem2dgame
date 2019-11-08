@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b5f87016-7380-4c2c-8908-9c5b9f608a5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeFim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeFim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeInstrucoes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaDeJogo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/TelaResultadoDaPergunta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto/Tiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto/Tiro.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -30,7 +30,7 @@ class Tiro(Cenario):
                 colisoes = pygame.sprite.spritecollide(inimigo, game.tiros, False)
                 callback = pygame.sprite.collide_mask
                 colisao = pygame.sprite.spritecollideany(inimigo, colisoes, callback)
-                if collisao:
+                if colisao:
                     inimigo.vida = inimigo.vida - 1
                     game.tiros.pop(game.tiros.index(self))
                     if inimigo.vida < 1:
@@ -47,7 +47,7 @@ class Tiro(Cenario):
             colisoes = pygame.sprite.spritecollide(game.jogador, game.tirosInimigo, False)
             callback = pygame.sprite.collide_mask
             colisao = pygame.sprite.spritecollideany(game.jogador, colisoes, callback)
-            if collide:
+            if colisao:
                 if game.ehInvencivel:
                     game.tirosInimigo.pop(game.tirosInimigo.index(self))
                 elif game.vidasExtras > 0:

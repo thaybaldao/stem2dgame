@@ -89,13 +89,17 @@ class TelaDeJogo(Tela):
         elif len(game.inimigos) == 0 and self.tempoDeBatalha > 0:
                 game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel, int(game.pontuacao/25), '1'))
 
+    def aparecimentoInimigos(self, game):
+        if len(game.obstaculos) == 0 or game.obstaculos[-1].x + game.obstaculos[-1].largura + self.tolerancia < LARGURA_DA_TELA:
+            game.inimigos.append(Inimigo(LARGURA_DA_TELA, 563, pygame.image.load(os.path.join('Imagens', 'inimigo_1.png')), 5 + game.dvel,
+                    int(game.pontuacao / 25), '1'))
 
     def checarComportamentoJogador(self, game, evento):
         # verificar se o usuario pediu para o jogador fazer algum comando (atirar ou pular)
         if evento != [] and evento.type == pygame.KEYDOWN: #verificar se há algo na fila de eventos e se há teclas precionadas
             if evento.key == pygame.K_UP:
                 game.jogador.pular(game)
-            elif self.batalha and evento.key == pygame.K_SPACE:
+            elif evento.key == pygame.K_SPACE:
                 game.jogador.atirar(game)
 
 
@@ -286,10 +290,11 @@ class TelaDeJogo(Tela):
                 game.aparecimentoElementos -= 1
             if self.time % 1200 == 0:
                 game.dvel += 1
+                self.aparecimentoInimigos(game)
 
             # iniciar batalhas
-            if not self.batalha and self.time % 1800 == 0:
-                self.telaBatalha(game)
+            #if not self.batalha and self.time % 1800 == 0:
+            #    self.telaBatalha(game)
 
 
             if self.time % 30 == 0:
